@@ -1,0 +1,22 @@
+{
+  "Navbar": {
+    "LinksData": {
+      "home": {
+        "title": "الرئيسية",
+        "href": "/"
+      },
+      "serves": {
+        "title": "الخدمات",
+        "href": "/serves"
+      },
+      "contact": {
+        "title": "الإتصال",
+        "href": "/contact"
+      }
+    }
+  },
+  "HomePage": {
+    "title": "مرحيا",
+    "about": "في مكتبة الترجمة "
+  }
+}

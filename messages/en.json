@@ -1,0 +1,22 @@
+{
+  "Navbar": {
+    "LinksData": {
+      "home": {
+        "title": "Home",
+        "href": "/"
+      },
+      "serves": {
+        "title": "Server",
+        "href": "/serves"
+      },
+      "contact": {
+        "title": "Contact",
+        "href": "/contact"
+      }
+    }
+  },
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  }
+}
