@@ -20,7 +20,10 @@ export default function LocaleSwitcherSelect({
     const nextLocale = e.target.value.toLowerCase();
     startTransition(() => {
       router.replace(`/${nextLocale}`);
-      router.refresh()
+      const newPath = pathname.replace(/^\/(en|ar)/, `/${nextLocale}`);
+      router.push(newPath);
+
+      router.refresh();
     });
   }
 
