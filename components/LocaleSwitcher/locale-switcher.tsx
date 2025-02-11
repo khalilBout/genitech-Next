@@ -6,7 +6,6 @@ import { locales } from "@/config";
 export default function LocaleSwitcher() {
   // const t = useTranslations("LocaleSwitcher");
   const locale = useLocale();
-  // console.log(locales);
 
   return (
     <LocaleSwitcherSelect defaultValue={locale} label="">
