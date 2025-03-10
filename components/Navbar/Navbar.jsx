@@ -22,7 +22,7 @@ const Navbar = () => {
   // ];
   return (
     <div className="flex">
-      <ul className=" grow flex gap-4 ">
+      <ul className=" grow flex gap-5 ">
         {linkKeys.map((elm, ind) => (
           <li key={ind}>
             <Link href={t(`LinksData.${elm}.href`)}>
