@@ -4,7 +4,7 @@ import LocaleSwitcherSelect from "./locale-switcher-select";
 import { locales } from "@/config";
 
 export default function LocaleSwitcher() {
-  // const t = useTranslations("LocaleSwitcher");
+  const t = useTranslations("LocaleSwitcher");
   const locale = useLocale();
 
   return (

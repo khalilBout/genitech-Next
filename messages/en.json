@@ -1,22 +1,329 @@
 {
-  "Navbar": {
-    "LinksData": {
-      "home": {
-        "title": "Home",
-        "href": "/"
+  "Welcome to React": "Welcome to the world of React",
+  "navbar": {
+    "logo": "Coffee "
+  },
+  "hero": {
+    "title": "Genitech",
+    "suTitle": "Innovation with Genius, Execution with Professionalism",
+    "desc": "We believe that technology is not just a tool, but a means to achieve creativity and excellence. By combining technical genius with innovative solutions, we help businesses achieve their digital goals.",
+    "btn-1": "Discover More",
+    "btn-2": "Discover More"
+  },
+  "link": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "btn": "Order Now"
+  },
+  "linkService": {
+    "deskapp": "Desktop Applications",
+    "mobileapp": "Mobile Applications",
+    "webapp": "Web Applications",
+    "design": "UI/UX Design"
+  },
+  "Statistic": {
+    "box-1": {
+      "nub": "+10",
+      "desc": "Years Experience in the Field"
+    },
+    "box-2": {
+      "nub": "4.9/5",
+      "desc": "Average Client Rating"
+    },
+    "box-3": {
+      "nub": "+10,000",
+      "desc": "Downloads for Our Clients' Apps"
+    },
+    "box-4": {
+      "nub": "+80%",
+      "desc": "Of Our Clients Return to Work with Us"
+    },
+    "box-5": {
+      "nub": "+25",
+      "desc": "Satisfied Clients"
+    },
+    "box-6": {
+      "nub": "24/7",
+      "desc": "Available to Serve You"
+    },
+    "box-7": {
+      "nub": "+10,000",
+      "desc": "Visits to Our Clients' Websites"
+    },
+    "box-8": {
+      "nub": "+99%",
+      "desc": "Project Stability Rate"
+    }
+  },
+
+  "services": {
+    "heroTitle": "We Offer You More Than Just a Service...",
+    "heroTitle2": "We Innovate Digital Solutions That Make a Difference!",
+    "servis-1": {
+      "title": "Mobile App Development",
+      "desc": "We turn your ideas into successful apps with sleek design and fast performance. Whether you want to boost sales or enhance customer experience, we provide the perfect solution!"
+    },
+    "servis-2": {
+      "title": "Website Development",
+      "desc": "Your website is your digital gateway. We design and develop professional, fast, and responsive websites using the latest technologies to help you attract customers and increase profits."
+    },
+    "servis-3": {
+      "title": "Desktop Application Development",
+      "desc": "We provide smart software solutions to help you manage your business efficiently, through powerful and secure desktop applications tailored to your needs."
+    },
+    "servis-4": {
+      "title": "Logo & UI/UX Design",
+      "desc": "We design a unique brand identity that reflects your vision with a professional touch, enhancing customer trust and attracting attention."
+    }
+  },
+  "about": {
+    "title-1": "The Genitech Team",
+    "title-2": "is the driving force behind every success.",
+    "desc": "We bring together a team of professionals working collaboratively to achieve our clients' success using the best technologies and solutions.",
+    "sport": {
+      "title": "Best Service",
+      "desc": "Committed to providing quality."
+    },
+    "service": {
+      "title": "24/7 Support",
+      "desc": "Available at all times."
+    }
+  },
+  "product": {
+    "title": "Our Digital Products",
+    "title2": "Innovative Solutions at Your Fingertips",
+    "desc": "Discover our exclusive range of digital products designed to facilitate your business and enhance your digital presence. Integrated solutions of the highest quality standards, ready to use immediately!",
+    "btn": "Read more",
+    "detail": "Product Details",
+    "ourWork": "From our work "
+  },
+  "profil": {
+    "title": "Discover how",
+    "span": "Genitech",
+    "title2": "helped its clients achieve their digital goals through innovative solutions.",
+    "btn": "Read More"
+  },
+  "blogComp": {
+    "title": "Our Blog",
+    "span": "| Your Window to the Latest Innovations and Technologies",
+    "btn": "View More"
+  },
+  "contact": {
+    "title": "How Can We Help You?",
+    "name": "Name",
+    "email": "Email",
+    "sub": "Subject",
+    "phone": "Phone Number",
+    "messege": "Message",
+    "send": "Send"
+  },
+  "contact-2": {
+    "desc": "Do you have a question or need a service? Contact us now for a consultation, to get more details, or to start your project! Our support team is ready to respond quickly and provide the assistance you need."
+  },
+  "summary": {
+    "title": "We Turn Ideas into Digital Reality!",
+    "desc-1": "In a rapidly evolving world, entering the digital space is no longer an option—it’s a necessity. But the real question is: how do you make your digital presence stand out? This is where we come in! We don’t just offer conventional solutions; we craft integrated digital experiences that elevate your brand to the next level.",
+    "desc-2": "We start by understanding your vision, transforming it into a design that reflects your brand’s essence, and then building a website or application that goes beyond aesthetics to deliver seamless performance and an exceptional user experience. From websites that attract visitors and convert them into customers to mobile and desktop applications that enhance engagement with your audience, we ensure that every detail has meaning and value. And to make sure your digital presence is not just a facade, we complete your journey with a visual identity that leaves a lasting impression—from logo design to the finest details.",
+    "desc-3": "But the story doesn’t end here! We don’t create static solutions; we innovate interactive systems that reflect your actual needs and provide you with a real competitive advantage. We believe that technology is not just a tool but a means to make a difference and a weapon to help you stand out in a crowded market. When you start your journey with us, you won’t just be a client—you’ll be a partner in a creative journey that blends art and technology to deliver something extraordinary.",
+    "text": "We start by understanding your vision, transforming it into a design that reflects your brand’s essence, and then building a website or application that goes beyond aesthetics to deliver seamless performance and an exceptional user experience. From websites that attract visitors and convert them into customers to mobile and desktop applications that enhance engagement with your audience, we ensure that every detail has meaning and value. And to make sure your digital presence is not just a facade, we complete your journey with a visual identity that leaves a lasting impression—from logo design to the finest details."
+  },
+  "footer": {
+    "desc": "We believe that technology is not just a tool but a means to make a difference, a weapon that helps you stand out in a competitive market. When you start your journey with us, you won’t just be a client, but a partner in a creative journey that blends art and technology to deliver something exceptional.",
+    "service": {
+      "title": "Our Services",
+      "srv-1": "Mobile App Development",
+      "srv-2": "Website Development",
+      "srv-3": "Desktop App Development",
+      "srv-4": "Logo & Brand Identity Design",
+      "srv-5": "UI/UX Design"
+    },
+    "links": {
+      "title": "Our Links",
+      "link-1": "Home",
+      "link-2": "About Us",
+      "link-3": "Blog",
+      "link-4": "Contact Us",
+      "link-5": "Privacy Policy"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "add": "Damascus, Al-Hamra Street, Building No. 25, Third Floor",
+      "phone": "+963 944 567890",
+      "email": "info@yourcompany-sy.com"
+    }
+  },
+  "phoneApp": {
+    "hero": {
+      "title": "Genie Tech",
+      "suTitle": "Turn Your Idea into a Successful App!",
+      "desc": "We offer professional services in designing and developing mobile applications for Android and iOS, ensuring a seamless user experience with high performance, fast response, and stability. Whether you want to launch a business app, an e-commerce store, an educational platform, or a custom service app, we provide smart solutions with modern designs and advanced technologies to ensure an enjoyable user experience for your customers.",
+      "btn-1": "Discover More",
+      "btn-2": "Get Started Now"
+    },
+    "why": {
+      "title": "Why Do You Need a Mobile App?",
+      "desc": "In today's world, smartphones have become an essential part of everyone's life, and with them, mobile apps have become a powerful tool for business growth, enhancing customer experience, and achieving sustainable profits. Owning a mobile app is not just a luxury; it is a necessary investment that can make a significant difference in the success of your project.",
+      "box-1": "Strong Competitive Advantage",
+      "box-2": "Increased Sales and Profits",
+      "box-3": "Reach a Wider Audience",
+      "box-4": "Enhanced User Experience"
+    },
+    "Features": {
+      "title": "Features of Developing Apps with Us",
+      "desc1": "We are committed to delivering applications with attractive and user-friendly interfaces that ensure a seamless user experience. We pay attention to every detail, from selecting colors and fonts to designing smart interactions that make the app more engaging and effective.",
+      "desc2": "Whether you're targeting Android or iOS users, we guarantee an app that is compatible with all devices and delivers outstanding performance. We utilize the latest technologies to ensure smooth and stable operation, with continuous optimization to enhance speed and efficiency.",
+      "desc3": "Your journey with us doesn't end after launch—we continue to provide ongoing technical support to ensure app stability and resolve any technical issues. We also offer regular updates to introduce new features and enhance performance in line with your business growth."
+    },
+    "steps": {
+      "title": "Steps to Work with Us",
+      "desc": "From the moment you share your idea, we follow a structured approach to deliver a high-performance app. Here’s how we bring your vision to life:",
+      "step-1": {
+        "title": "1. Analysis & Planning",
+        "desc": "We start by understanding your vision, analyzing market needs, and defining core features. A clear roadmap ensures smooth and organized development."
       },
-      "serves": {
-        "title": "Server",
-        "href": "/serves"
+      "step-2": {
+        "title": "2. UI/UX Design",
+        "desc": "We craft intuitive user experiences (UX) with visually appealing interfaces (UI) that reflect your brand and enhance engagement."
       },
-      "contact": {
-        "title": "Contact",
-        "href": "/contact"
+      "step-3": {
+        "title": "3. Development & Coding",
+        "desc": "Using the latest technologies, we develop fast, stable, and secure apps compatible with iOS, Android, and web platforms."
+      },
+      "step-4": {
+        "title": "4. Testing & Launch",
+        "desc": "Before release, we conduct rigorous testing to ensure a flawless experience, then launch the app with ongoing support and updates."
       }
     }
   },
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "webApp": {
+    "hero": {
+      "title": "Genie Tech",
+      "suTitle": "Your Digital Gateway to Success",
+      "desc": "Your website is more than just web pages—it’s your gateway to reaching your audience, showcasing your services, and achieving sustainable growth. With our integrated solutions, we ensure a professional website that combines visual appeal, fast performance, and a seamless user experience.",
+      "btn-1": "Discover More",
+      "btn-2": "Get Started"
+    },
+    "why": {
+      "title": "Why Do You Need a Website?",
+      "desc": "In today’s world, having a digital presence is essential for any business or personal brand. Your website serves as your digital storefront, putting you ahead of the competition. It enables you to connect with your target audience, strengthen your brand, and achieve your goals efficiently. Whether you offer services, sell products, or share valuable content, a website gives you a strong and professional presence online.",
+      "box-1": "Strong Digital Presence",
+      "box-2": "Wider Audience Reach",
+      "box-3": "Efficient Business Management",
+      "box-4": "Increased Sales & Revenue"
+    },
+    "Features": {
+      "title": "Advantages of Developing Websites with Us",
+      "desc1": "Professional & Responsive Design – We create modern and visually appealing websites that adapt seamlessly to all devices, ensuring a smooth and user-friendly experience. Our attention to detail guarantees a website that reflects your unique brand identity.",
+      "desc2": "High Performance & Fast Loading – We deliver fast, responsive websites using the latest technologies and best optimization practices. Clean code and advanced techniques ensure smooth browsing, enhancing user satisfaction and boosting your search engine ranking.",
+      "desc3": "Advanced Security & Protection – We safeguard your website against cyber threats with robust security protocols and regular updates. From data encryption to server protection, we ensure a safe and reliable experience for your visitors."
+    },
+    "steps": {
+      "title": "Our Website Development Process",
+      "desc": "From the moment you share your idea, we follow a structured and precise workflow to deliver a high-performing professional website. Here’s how we turn your vision into reality:",
+      "step-1": {
+        "title": "1. Idea Analysis & Planning",
+        "desc": "We begin by understanding your needs and project goals to define the best strategy for creating a website that aligns with your vision."
+      },
+      "step-2": {
+        "title": "2. UI/UX Design & Prototyping",
+        "desc": "We transform your idea into a professional design that attracts "
+      }
+    }
+  },
+  "deskApp": {
+    "hero": {
+      "title": "Genie Tech",
+      "suTitle": "Desktop Application Development - Comprehensive Software Solutions",
+      "desc": "We provide integrated solutions for developing desktop applications tailored to meet the needs of businesses and individuals, ensuring high performance, a seamless user experience, and compatibility with various operating systems. Whether you need an application for customer data management, internal process control, or task automation, we offer the perfect solution using the latest technologies.",
+      "btn-1": "Discover More",
+      "btn-2": "Get Started"
+    },
+    "why": {
+      "title": "What Our Desktop Applications Offer You",
+      "desc": "A desktop application provides powerful and stable performance with advanced security, making it the ideal solution for managing your business efficiently without requiring a constant internet connection.",
+      "box-1": "Fast & Stable Performance",
+      "box-2": "Advanced Security - Strong Data Protection",
+      "box-3": "Seamless Integration - Connect with Databases",
+      "box-4": "Higher Productivity - Reduced Errors"
+    },
+    "Features": {
+      "title": "Why Develop Desktop Applications with Us?",
+      "desc1": "We use the latest technologies to ensure speed and high efficiency, supporting Windows, macOS, and Linux, with integration capabilities for databases like PostgreSQL, MySQL, and MongoDB, as well as connectivity with external devices like printers, scanners, and payment systems.",
+      "desc2": "Professional Design & Advanced User Experience – We focus on delivering desktop applications with elegant, user-friendly interfaces, ensuring a smooth experience that meets your needs and maximizes efficiency and productivity. Our priority is seamless interaction and stable performance for a comfortable user experience.",
+      "desc3": "Security & High Reliability – We implement the latest security standards to protect your data from breaches and cyber threats. Advanced encryption techniques and strict security measures are applied, with continuous updates to ensure a secure and stable performance in the long run."
+    },
+    "steps": {
+      "title": "Our Desktop Application Development Process",
+      "desc": "We follow a structured methodology to achieve the best results, from concept to final application. Here are the key development stages:",
+      "step-1": {
+        "title": "1. Concept Analysis & Planning",
+        "desc": "Analyzing user behavior, defining essential features and required functionalities, creating a clear project roadmap, and setting a development timeline."
+      },
+      "step-2": {
+        "title": "2. UI/UX Design & Experience",
+        "desc": "Designing a modern, responsive user interface for a seamless experience, while enhancing usability through interaction studies and ease-of-use optimization."
+      },
+      "step-3": {
+        "title": "3. Development & Programming",
+        "desc": "Building the application with modern technologies, ensuring strong integration with databases and external devices, and implementing security measures such as two-factor authentication and data encryption."
+      },
+      "step-4": {
+        "title": "4. Testing & Deployment",
+        "desc": "Conducting thorough testing to ensure performance, security, and cross-platform compatibility, followed by a trial version for review and adjustments. Post-launch, we provide ongoing technical support and regular updates to maintain stability and introduce new features as needed."
+      }
+    }
+  },
+  "design": {
+    "hero": {
+      "title": "Genie Tech",
+      "suTitle": "Logo & Visual Identity | UI/UX Design",
+      "desc": "Your brand’s visual identity is its first impression—reflecting its values, setting it apart from competitors, and building customer trust. A professional design ensures a strong and reliable brand image.",
+      "btn-1": "Learn More",
+      "btn-2": "Get Started"
+    },
+    "why": {
+      "title": "Why Choose Our Logo & Visual Identity Design Service?",
+      "desc": "We create innovative and professional logo and visual identity designs that capture your brand’s essence with harmonious colors, fonts, and symbols for a strong and memorable identity. Our service includes versatile file formats suitable for print, websites, and social media, with flexible revisions to bring your vision to life.",
+      "box-1": "Unique & Creative Design",
+      "box-2": "Multi-Use File Formats",
+      "box-3": "Consistent Visual Harmony",
+      "box-4": "Flexible Revisions"
+    },
+    "Features": {
+      "title": "Key Features of Our Logo & UI/UX Design Service",
+      "desc1": "We craft distinctive and professional logo and visual identity designs that perfectly reflect your brand’s essence, ensuring color, font, and symbol consistency for a strong, recognizable presence. Our designs come in multiple formats for print, digital, and social media use, with tailored revisions to match your vision.",
+      "desc2": "Innovative & Standout Branding – We blend creativity with in-depth research to understand your brand and develop a visual identity that embodies its vision and values. Every detail is meticulously crafted to ensure a unique logo that strengthens your market presence and leaves a lasting impact.",
+      "desc3": "Seamless & Engaging User Experience – Our professional UI/UX designs prioritize user-friendly interaction, featuring intuitive layouts that enhance website and app usability. We focus on visually appealing, consistent, and modern interfaces that align with the latest design standards, ensuring higher engagement and satisfaction."
+    },
+    "steps": {
+      "title": "What Does Your Visual Identity Include?",
+      "desc": "Your visual identity forms the foundation of your brand, combining distinctive design elements with visual consistency to differentiate you from competitors. It encompasses all key components that enhance brand recognition and professionalism across digital and print media.",
+      "step-1": {
+        "title": "1. Professional Logo",
+        "desc": "We design a logo that captures your brand’s essence in a simple yet elegant way, ensuring easy recognition. Our logos are versatile and adaptable for all digital and print platforms."
+      },
+      "step-2": {
+        "title": "2. Unique Colors & Typography",
+        "desc": "We select a cohesive color palette and fonts that reflect your brand’s personality, reinforcing a consistent visual identity. This enhances brand recognition across ads, websites, and social media."
+      },
+      "step-3": {
+        "title": "3. Print Design Elements",
+        "desc": "We create professional business cards, letterheads, envelopes, and invoice templates that enhance your brand’s credibility. Each element is thoughtfully designed to maintain visual consistency and a distinct brand identity."
+      },
+      "step-4": {
+        "title": "4. Digital Design Assets",
+        "desc": "We provide fully integrated digital designs, including ready-made social media templates, cover images, and eye-catching digital ads. This ensures a cohesive and professional brand presence across all digital platforms."
+      }
+    }
+  },
+  "blog": {
+    "title": "Our Digital Blog",
+    "suTitle": "Your Window into the World of Technology",
+    "desc": "Welcome to our blog, where we keep up with the latest advancements in technology, design, and development! We provide you with rich content, insights, and tips to help you enhance your digital presence and make the most of modern tech solutions. Follow us to stay ahead!",
+    "title2": "All Blogs",
+    "titleInTheBlog": "What to read next"
   }
 }

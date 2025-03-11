@@ -1,5 +1,4 @@
 "use client";
-// import { cn } from "@/lib/utils";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import React, { ChangeEvent, ReactNode, useTransition } from "react";
 type Props = {
@@ -28,16 +27,15 @@ export default function LocaleSwitcherSelect({
   }
 
   return (
-    <label className="">
+    <label className=" m-1 font-Title font-bold absolute -bottom-20 z-20 -left-4 px-2 bg-green-100 flex flex-col">
       <select
-        className="inline-flex appearance-none bg-transparent py-3 pl-2 pr-6"
+        className="inline-flex appearance-none w-[70px] p-1 hover:text-primary"
         defaultValue={defaultValue}
         disabled={isPending}
         onChange={onSelectChange}
       >
         {children}
       </select>
-      <span className="pointer-events-none absolute right-2 top-[8px]">⌄</span>
     </label>
   );
 }
