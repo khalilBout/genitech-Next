@@ -13,12 +13,12 @@ const intlMiddleware = createMiddleware({
 const authMiddleware = withAuth(
   function middleware(req: NextRequest) {
     // حماية لوحة التحكم
-    if (
-      req.nextUrl.pathname.startsWith("/dashboard") &&
-      req.nextauth?.token?.role !== "admin"
-    ) {
-      return NextResponse.rewrite(new URL("/", req.url));
-    }
+    // if (
+    //   req.nextUrl.pathname.startsWith("/dashboard") &&
+    //   req.nextauth?.token?.role !== "admin"
+    // ) {
+    //   return NextResponse.rewrite(new URL("/", req.url));
+    // }
 
     // تمرير الطلب لباقي الصفحات غير لوحة التحكم
     return intlMiddleware(req);
