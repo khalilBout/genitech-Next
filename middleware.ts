@@ -29,7 +29,6 @@ const authMiddleware = withAuth(
     },
   }
 );
-
 // الجمع بين التعدد اللغوي والحماية الخاصة بلوحة التحكم
 export default function combinedMiddleware(req: NextRequest) {
   if (req.nextUrl.pathname.startsWith("/dashboard")) {
