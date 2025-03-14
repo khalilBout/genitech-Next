@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const ProductSchema = new mongoose.Schema({
+const PortfolioSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: [true, "Please Enter product Title"],
+    required: [true, "Please Enter Portfolio Title"],
   },
   title_en: {
     type: String,
-    required: [true, "Please Enter product Title"],
+    required: [true, "Please Enter Portfolio Title"],
   },
   category: [
     {
@@ -17,11 +17,11 @@ const ProductSchema = new mongoose.Schema({
   ],
   description: {
     type: String,
-    required: [true, "Please enter product description"],
+    required: [true, "Please enter Portfolio description"],
   },
   description_en: {
     type: String,
-    required: [true, "Please enter product description"],
+    required: [true, "Please enter Portfolio description"],
   },
   mainImg: {
     type: String,
@@ -34,7 +34,7 @@ const ProductSchema = new mongoose.Schema({
   },
 });
 
-const Product =
-  mongoose.models.Products || mongoose.model("Products", ProductSchema);
+const Portfolio =
+  mongoose.models.Portfolios || mongoose.model("Portfolios", PortfolioSchema);
 
-export default Product;
+export default Portfolio;

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const Register = () => {
@@ -9,7 +8,6 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [checked, setChecked] = useState(false);
   const user = {
     name,
     email,
@@ -101,16 +99,16 @@ const Register = () => {
     }
   };
   return (
-    <div className="w-[450px] h-[580px] mt-24">
+    <div dir="rtl" className="w-[450px] h-[580px] mt-24">
       <form className="w-full h-full flex items-center justify-center">
         <div className="px-6 py-4 w-full h-[96%] flex flex-col justify-start ">
-          <h1 className="font-fontTitle font-semibold text-2xl mdl:text-3xl mb-4">
+          <h1 className="font-Title text-slate-200 text-center font-semibold text-2xl mdl:text-3xl mb-4">
             إنشاء حساب جديد
           </h1>
           <div className="flex flex-col gap-3">
             {/* client name */}
             <div className="flex flex-col gap-.5">
-              <p className="font-fontTitle text-base font-semibold text-gray-600">
+              <p className="font-Title text-slate-200 py-1 text-base font-semibold">
                 الإسم
               </p>
               <input
@@ -129,7 +127,7 @@ const Register = () => {
             </div>
             {/* Email */}
             <div className="flex flex-col gap-.5">
-              <p className="font-fontTitle text-base font-semibold text-gray-600">
+              <p className="font-Title text-slate-200 py-1 text-base font-semibold">
                 البريد الإلكتروني
               </p>
               <input
@@ -149,7 +147,7 @@ const Register = () => {
 
             {/* Password */}
             <div className="flex flex-col gap-.5">
-              <p className="font-titleFont text-base font-semibold text-gray-600">
+              <p className="font-Title text-slate-200 py-1 text-base font-semibold">
                 الرقم السري
               </p>
               <input
@@ -166,19 +164,7 @@ const Register = () => {
                 </p>
               )}
             </div>
-            {/* Checkbox */}
-            {/* <div className="flex items-start mdl:items-center gap-2">
-              <input
-                onChange={() => setChecked(!checked)}
-                className="w-4 h-4 mt-1 mdl:mt-0 cursor-pointer"
-                type="checkbox"
-              />
-              <p className="text-sm text-primeColor">
-                I agree to the OREBI{" "}
-                <span className="text-blue-500">Terms of Service </span>and{" "}
-                <span className="text-blue-500">Privacy Policy</span>.
-              </p>
-            </div> */}
+
             <button
               onClick={handleSignUp}
               // className={`${
@@ -186,7 +172,7 @@ const Register = () => {
               //     ? "bg-primeColor hover:bg-black hover:text-white cursor-pointer"
               //     : "bg-gray-500 hover:bg-gray-500 hover:text-gray-200 cursor-none"
               // }  w-full text-gray-200 text-base font-medium h-10 rounded-md hover:text-white duration-300`}
-              className=" font-fontTitle font-semibold bg-slate-400/70 hover:bg-black hover:text-white cursor-pointer w-full text-gray-200 text-base h-10 rounded-md duration-300"
+              className=" font-Title font-semibold bg-slate-400/70 hover:bg-black hover:text-white cursor-pointer w-full text-gray-100 text-base h-10 rounded-md duration-300"
             >
               إنشاء الحساب
             </button>

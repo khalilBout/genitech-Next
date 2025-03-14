@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const FormContact = () => {
   const t = useTranslations();
@@ -14,26 +14,26 @@ const FormContact = () => {
 
   const sendEmail = (e) => {
     console.log("mesg:", e);
-    // e.preventDefault();
-    // setError(false);
-    // setSuccess(false);
+    e.preventDefault();
+    setError(false);
+    setSuccess(false);
 
-    // emailjs
-    //   .sendForm(
-    //     process.env.NEXT_PUBLIC_SERVICE_ID,
-    //     process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    //     form.current,
-    //     process.env.NEXT_PUBLIC_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     () => {
-    //       setSuccess(true);
-    //       form.current.reset();
-    //     },
-    //     () => {
-    //       setError(true);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_fofofai",
+        "template_h98qhdc",
+        form.current,
+        "5yYo5mqmn7r4S-LwP"
+      )
+      .then(
+        () => {
+          setSuccess(true);
+          form.current.reset();
+        },
+        () => {
+          setError(true);
+        }
+      );
   };
 
   return (
@@ -52,7 +52,7 @@ const FormContact = () => {
                   {t("contact.name")}
                 </p>
                 <input
-                  name="user_name"
+                  name="name"
                   className=" placeholder:text-[14px] px-4 text-base  outline-none"
                   type="text"
                   //   placeholder="الإسم ..."
@@ -65,7 +65,7 @@ const FormContact = () => {
                   {t("contact.email")}
                 </p>
                 <input
-                  name="user_email"
+                  name="email"
                   className=" placeholder:text-[14px] px-4 text-base  outline-none"
                   type="text"
                   //   placeholder="cc@cc.com"
@@ -80,7 +80,7 @@ const FormContact = () => {
                   {t("contact.sub")}
                 </p>
                 <input
-                  name="user_name"
+                  name="subject"
                   className=" placeholder:text-[14px] px-4 text-base  outline-none"
                   type="text"
                   //   placeholder="موضوع الرسالة  ..."
@@ -93,7 +93,7 @@ const FormContact = () => {
                   {t("contact.phone")}
                 </p>
                 <input
-                  name="user_email"
+                  name="phone"
                   className=" placeholder:text-[14px] px-4 text-base  outline-none"
                   type="text"
                   //   placeholder="+00 XXXX"
@@ -108,7 +108,7 @@ const FormContact = () => {
               </p>
               <textarea
                 rows={6}
-                name="user_message"
+                name="message"
                 className=" placeholder:text-[16px] px-4 text-base font-medium placeholder:font-normal  outline-none"
                 type="text"
                 // placeholder="ماتود إخبارنا به  .... "

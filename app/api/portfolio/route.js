@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import Product from "@/models/product";
+import Portfolio from "@/models/portfolio";
 import connectDB from "@/utilit/connectDB";
 
 export const dynamic = "force-dynamic";
@@ -7,8 +7,8 @@ export const dynamic = "force-dynamic";
 export const GET = async (request) => {
   try {
     await connectDB();
-    const Products = await Product.find();
-    return new NextResponse(JSON.stringify(Products), { status: 200 });
+    const Portfolios = await Portfolio.find();
+    return new NextResponse(JSON.stringify(Portfolios), { status: 200 });
   } catch (err) {
     return new NextResponse(`Database Error => ${err}`, { status: 500 });
   }
@@ -16,11 +16,11 @@ export const GET = async (request) => {
 
 export const POST = async (request) => {
   const body = await request.json();
-  const newProduct = new Product(body);
+  const newPortfolio = new Portfolio(body);
   try {
     await connectDB();
-    await newProduct.save();
-    return new NextResponse("new product has been created", { status: 201 });
+    await newPortfolio.save();
+    return new NextResponse("new Portfolio has been created", { status: 201 });
   } catch (err) {
     return new NextResponse(`Database Error => ${err}`, { status: 500 });
   }

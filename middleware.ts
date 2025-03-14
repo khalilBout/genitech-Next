@@ -13,12 +13,12 @@ const intlMiddleware = createMiddleware({
 const authMiddleware = withAuth(
   function middleware(req: NextRequest) {
     // حماية لوحة التحكم
-    // if (
-    //   req.nextUrl.pathname.startsWith("/dashboard") &&
-    //   req.nextauth?.token?.role !== "admin"
-    // ) {
-    //   return NextResponse.rewrite(new URL("/", req.url));
-    // }
+    if (
+      req.nextUrl.pathname.startsWith("/dashboard") &&
+      req.nextauth?.token?.role !== "admin"
+    ) {
+      return NextResponse.rewrite(new URL("/", req.url));
+    }
 
     // تمرير الطلب لباقي الصفحات غير لوحة التحكم
     return intlMiddleware(req);
@@ -31,7 +31,11 @@ const authMiddleware = withAuth(
 );
 // الجمع بين التعدد اللغوي والحماية الخاصة بلوحة التحكم
 export default function combinedMiddleware(req: NextRequest) {
-  if (req.nextUrl.pathname.startsWith("/dashboard")) {
+  if (
+    req.nextUrl.pathname.startsWith("/dashboard") ||
+    req.nextUrl.pathname.startsWith("/en/dashboard") ||
+    req.nextUrl.pathname.startsWith("/ar/dashboard")
+  ) {
     return authMiddleware(req);
   }
   return intlMiddleware(req);
@@ -39,5 +43,12 @@ export default function combinedMiddleware(req: NextRequest) {
 
 // تحديد المسارات التي يتم تطبيق `middleware` عليها
 export const config = {
-  matcher: ["/", "/login", "/(ar|en)/:path*", "/dashboard/:path*"],
+  matcher: [
+    "/",
+    "/login",
+    "/(ar|en)/:path*",
+    "/dashboard/:path*",
+    "/en/dashboard/:path*",
+    "/ar/dashboard/:path*",
+  ],
 };

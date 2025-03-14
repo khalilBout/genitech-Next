@@ -56,16 +56,18 @@ const Login = () => {
     }
   };
   return (
-    <div className="w-[450px] h-[580px] font-medium font-fontTitle">
+    <div dir="rtl" className="w-[450px] h-[580px] font-medium font-fontTitle">
       <form className="w-full h-full flex items-center justify-center">
         <div className="px-6 py-4 w-full h-[90%] flex flex-col justify-center">
-          <h1 className="font-fontTitle font-semibold text-2xl mdl:text-4xl mb-4">
+          <h1 className="font-Title font-semibold text-2xl mdl:text-4xl mb-4 text-center text-slate-200">
             تسجيل الدخول
           </h1>
           <div className="flex flex-col gap-3">
             {/* Email */}
             <div className="flex flex-col gap-.5">
-              <p className=" font-semibold text-gray-600">البريد الإلكتروني </p>
+              <p className="py-1 font-Title font-semibold text-slate-200">
+                البريد الإلكتروني{" "}
+              </p>
               <input
                 onChange={handleEmail}
                 value={email}
@@ -83,7 +85,7 @@ const Login = () => {
 
             {/* Password */}
             <div className="flex flex-col gap-.5">
-              <p className="font-titleFont text-base font-semibold text-gray-600">
+              <p className="py-1 font-Title text-slate-200 text-base font-semibold">
                 كلمة المرور
               </p>
               <input
@@ -103,7 +105,7 @@ const Login = () => {
 
             <button
               onClick={handleLogin}
-              className="bg-green-200 text-gray-500  px-4 py-2 text-[14px] mdl:text-[16px] hover:bg-green-400 cursor-pointer font-medium h-10 rounded-md  duration-300"
+              className="bg-green-200 font-Title text-gray-900 font-bold   px-4 py-2 text-[14px] mdl:text-[16px] hover:bg-green-400 cursor-pointer  h-10 rounded-md duration-300"
             >
               تسجيل الدخول
             </button>
