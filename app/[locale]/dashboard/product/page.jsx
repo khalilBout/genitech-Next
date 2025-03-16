@@ -8,7 +8,7 @@ const pageProductAdmin = async () => {
   //   const page = searchParams?.page || 1;
 
   const { allProducts } = await getProducts();
-  console.log("allProduct serv", allProducts);
+  // console.log("allProduct serv", allProducts);
   return (
     <div className="w-full font-Title overflow-auto">
       <div className="p-2  shadow-md  rounded-md">

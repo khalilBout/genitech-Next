@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import img2 from "@/public/slidAuto/img2.png";
-import img3 from "@/public/slidAuto/img3.png";
-import img4 from "@/public/slidAuto/img4.png";
+import img2 from "@/public/slidAuto/img2.webp";
+import img3 from "@/public/slidAuto/img3.webp";
+import img4 from "@/public/slidAuto/img4.webp";
 import Image from "next/image";
 
 const images = [img2, img3, img4];

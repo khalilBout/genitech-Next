@@ -13,7 +13,7 @@ const FormContact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    console.log("mesg:", e);
+    // console.log("mesg:", e);
     e.preventDefault();
     setError(false);
     setSuccess(false);

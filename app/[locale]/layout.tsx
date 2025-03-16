@@ -6,7 +6,7 @@ import { getMessages } from "next-intl/server";
 import AuthProvider from "@/utilit/AuthProvider/AuthProvider";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import bg from "@/public/bg.png";
+import bg from "@/public/bg.webp";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

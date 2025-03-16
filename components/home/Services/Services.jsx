@@ -1,10 +1,10 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import dsg from "@/public/services/dsg.png";
-import dst from "@/public/services/dst.png";
-import mbl from "@/public/services/mbl.png";
-import web from "@/public/services/web.png";
+import dsg from "@/public/services/dsg.webp";
+import dst from "@/public/services/dst.webp";
+import mbl from "@/public/services/mbl.webp";
+import web from "@/public/services/web.webp";
 import Link from "next/link";
 import Image from "next/image";
 

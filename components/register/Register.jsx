@@ -72,7 +72,6 @@ const Register = () => {
       password.length >= 6
     ) {
       try {
-        console.log("register user from FE:", user);
         const response = await fetch("/api/auth/register", {
           method: "POST",
           headers: {

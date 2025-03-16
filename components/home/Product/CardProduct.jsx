@@ -7,7 +7,6 @@ import Image from "next/image";
 const CardProduct = ({ item }) => {
   const t = useTranslations();
   const locale = useLocale();
-  console.log("the Products from client", item);
 
   return (
     <LocalizedLink

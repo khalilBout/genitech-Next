@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import heroImg from "@/public/hero/hero-1.png";
+import heroImg from "@/public/hero/hero-1.webp";
 import Image from "next/image";
 
 const Hero = () => {

@@ -1,5 +1,4 @@
 import Blog from "@/components/Blog/Blog";
-// import img1 from "@/public/blog/b1.png";
 import { getBlogs } from "@/utilit/getData/getBlogs";
 
 // const dataBlog = [

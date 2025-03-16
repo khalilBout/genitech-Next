@@ -4,15 +4,11 @@ import DeleteProduct from "./DeleteProduct";
 // import NoImg from "@/public/image/noImgeBook.webp";
 
 const TableAllProduct = ({ data }) => {
-  console.log("data:", data);
+  // console.log("data:", data);
 
   return (
     <>
-      <table
-        className="w-full "
-        data-tab-for="product"
-        data-page="active"
-      >
+      <table className="w-full " data-tab-for="product" data-page="active">
         <thead>
           <tr>
             <th className="max-w-[120px] text-[15px] font-Title px-2 text-right font-bold text-slate-200 p-2">

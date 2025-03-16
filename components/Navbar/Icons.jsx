@@ -49,26 +49,18 @@ const Icons = () => {
 
       <div className=" relative">
         <button
-          className=" bg-primary/30 hover:bg-primary rounded-full m-1 mdl:m-2 w-8 h-8 p-1 flex justify-center items-center"
+          className=" bg-primary/30 hover:bg-primary rounded-full m-1 mdl:m-2 w-8 h-8 p-1 flex justify-center items-center font-Title font-bold"
           onClick={() => setOpneLeng(!opneLeng)}
         >
-          <IoLanguageSharp size={17} />
-        </button>
-
-        {opneLeng && (
-          // <LocaleSwitcher />
+          {/* <IoLanguageSharp size={17} /> */}
           <LocaleSwitcherSelect defaultValue={locale}>
             {locales.map((cur) => (
-              <option
-                key={cur}
-                value={cur}
-                className="w-[70px] p-1 hover:text-primary"
-              >
+              <option key={cur} value={cur} className="">
                 {cur.toUpperCase()}
               </option>
             ))}
           </LocaleSwitcherSelect>
-        )}
+        </button>
       </div>
     </div>
   );

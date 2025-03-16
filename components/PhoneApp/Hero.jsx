@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import heroPhon from "@/public/PhoneApp/phonApp.svg";
+import heroPhon from "@/public/PhoneApp/phonApp.webp";
 import Image from "next/image";
 
 const Hero = () => {

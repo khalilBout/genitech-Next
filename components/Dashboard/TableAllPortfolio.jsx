@@ -4,7 +4,7 @@ import DeletePortfolio from "./DeletePortfolio";
 // import NoImg from "@/public/image/noImgeBook.webp";
 
 const TableAllPortfolio = ({ data }) => {
-  console.log("data:", data);
+  // console.log("data:", data);
 
   return (
     <>

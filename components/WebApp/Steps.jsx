@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import webSteps from "@/public/webApp/webStep.png";
+import webSteps from "@/public/webApp/webStep.webp";
 import Image from "next/image";
 
 const Steps = () => {

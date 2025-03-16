@@ -2,13 +2,13 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import mobile from "@/public/iconLinks/mobil.png";
-import desk from "@/public/iconLinks/desk.png";
-import web from "@/public/iconLinks/web.png";
-import design from "@/public/iconLinks/dsng.png";
+import mobile from "@/public/iconLinks/mobil.webp";
+import desk from "@/public/iconLinks/desk.webp";
+import web from "@/public/iconLinks/web.webp";
+import design from "@/public/iconLinks/dsng.webp";
 import Image from "next/image";
 import LocalizedLink from "../Ui/LocalizedLink";
-const LinkService = () => {
+const LinkService = ({ setOpenLinkService }) => {
   const t = useTranslations();
 
   return (
@@ -22,6 +22,7 @@ const LinkService = () => {
           />
           <LocalizedLink
             href="/mobileapp"
+            onClick={() => setOpenLinkService(false)}
             className="text-[13px] mdl:text-[16px] text-blue-950"
           >
             {t("linkService.mobileapp")}
@@ -35,6 +36,7 @@ const LinkService = () => {
           />
           <LocalizedLink
             href="/deskapp"
+            onClick={() => setOpenLinkService(false)}
             className="text-[13px] mdl:text-[16px] text-blue-950"
           >
             {t("linkService.deskapp")}
@@ -48,6 +50,7 @@ const LinkService = () => {
           />
           <LocalizedLink
             href="/webapp"
+            onClick={() => setOpenLinkService(false)}
             className="text-[13px] mdl:text-[16px] text-blue-950"
           >
             {t("linkService.webapp")}
@@ -61,6 +64,7 @@ const LinkService = () => {
           />
           <LocalizedLink
             href="/design"
+            onClick={() => setOpenLinkService(false)}
             className="text-[13px] mdl:text-[16px] text-blue-950"
           >
             {t("linkService.design")}

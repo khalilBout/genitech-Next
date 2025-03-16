@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import stepsImg from "@/public/PhoneApp/stepsImg.png";
+import stepsImg from "@/public/PhoneApp/stepsImg.webp";
 import Image from "next/image";
 
 const Steps = () => {

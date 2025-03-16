@@ -9,7 +9,19 @@ import BlogComp from "@/components/home/BlogComp/BlogComp";
 import ContactPage from "@/components/home/Contact/ContactPage";
 import WhatsAppBtn from "@/components/home/WhatsAppBtn/WhatsAppBtn";
 
-const pageMobileApp = () => {
+import { getPortfolios } from "@/utilit/getData/getPortfolio";
+import { getProducts } from "@/utilit/getData/getProducts";
+import { getLastBlogs } from "@/utilit/getData/getBlogs";
+
+const pageMobileApp = async () => {
+  const { allPortfolios } = await getPortfolios();
+  const { allProducts } = await getProducts();
+  const { AllBlogs } = await getLastBlogs();
+
+  // const filterProduct = allProducts.filter((elm) =>
+  //   elm.category.includes("mobileApp")
+  // );
+
   return (
     <div className=" ">
       <WhatsAppBtn />
@@ -17,9 +29,9 @@ const pageMobileApp = () => {
       <WhyUs />
       <Features />
       <Steps />
-      <Product />
-      <Profil />
-      <BlogComp />
+      <Product allProducts={allProducts} />
+      <Profil allPortfolios={allPortfolios} />
+      <BlogComp dataBlog={AllBlogs} />
       <ContactPage />
     </div>
   );

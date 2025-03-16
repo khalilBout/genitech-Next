@@ -1,8 +1,13 @@
 "use client";
-import commnet1 from "@/public/commnet/comment1.png";
-import commnet2 from "@/public/commnet/comment2.png";
-import user from "@/public/commnet/user.png";
-import bg from "@/public/commnet/bg.png";
+import commnet1 from "@/public/commnet/comment1.webp";
+import commnet2 from "@/public/commnet/comment2.webp";
+import user1 from "@/public/commnet/user1.webp";
+import user2 from "@/public/commnet/user2.webp";
+import user3 from "@/public/commnet/user3.webp";
+import user4 from "@/public/commnet/user4.webp";
+import user5 from "@/public/commnet/user5.webp";
+import user6 from "@/public/commnet/user6.webp";
+import bg from "@/public/commnet/bg.webp";
 import CartComment from "./CartComment";
 import Image from "next/image";
 
@@ -12,42 +17,42 @@ const dataComment = [
     user: "Folasade Daini",
     content:
       "يا خويا، خدمتي مع Genitech كانت هايلة بزاف! دارولي موقع يشرف البراند تاعي، ساهل في الاستعمال ويخدم مليح مع الزبائن. نصح بيهم لأي واحد حاب يخدم حاجة احترافية!",
-    img: user,
+    img: user1,
   },
   {
     id: 2,
     user: "Folasade Daini",
     content:
       "يا خويا، خدمتي مع Genitech كانت هايلة بزاف! دارولي موقع يشرف البراند تاعي، ساهل في الاستعمال ويخدم مليح مع الزبائن. نصح بيهم لأي واحد حاب يخدم حاجة احترافية!",
-    img: user,
+    img: user2,
   },
   {
     id: 3,
     user: "Folasade Daini",
     content:
       "يا خويا، خدمتي مع Genitech كانت هايلة بزاف! دارولي موقع يشرف البراند تاعي، ساهل في الاستعمال ويخدم مليح مع الزبائن. نصح بيهم لأي واحد حاب يخدم حاجة احترافية!",
-    img: user,
+    img: user3,
   },
   {
     id: 4,
     user: "Folasade Daini",
     content:
       "يا خويا، خدمتي مع Genitech كانت هايلة بزاف! دارولي موقع يشرف البراند تاعي، ساهل في الاستعمال ويخدم مليح مع الزبائن. نصح بيهم لأي واحد حاب يخدم حاجة احترافية!",
-    img: user,
+    img: user4,
   },
   {
     id: 5,
     user: "Folasade Daini",
     content:
       "يا خويا، خدمتي مع Genitech كانت هايلة بزاف! دارولي موقع يشرف البراند تاعي، ساهل في الاستعمال ويخدم مليح مع الزبائن. نصح بيهم لأي واحد حاب يخدم حاجة احترافية!",
-    img: user,
+    img: user5,
   },
   {
     id: 6,
     user: "Folasade Daini",
     content:
       "يا خويا، خدمتي مع Genitech كانت هايلة بزاف! دارولي موقع يشرف البراند تاعي، ساهل في الاستعمال ويخدم مليح مع الزبائن. نصح بيهم لأي واحد حاب يخدم حاجة احترافية!",
-    img: user,
+    img: user6,
   },
 ];
 const Comment = () => {

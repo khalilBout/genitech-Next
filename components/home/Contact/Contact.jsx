@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import imgConatct from "@/public/conatct/img.png";
+import imgConatct from "@/public/conatct/img.webp";
 import FormContact from "./FormContact";
 import Image from "next/image";
 

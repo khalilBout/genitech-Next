@@ -17,7 +17,6 @@ export async function GET(request, { params }) {
 export const DELETE = async (request, { params }) => {
   // امساك رقم تعريف المدونة
   const { id } = params;
-  console.log("start delete***********************************************");
 
   try {
     await connectDB();

@@ -2,37 +2,9 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import BlogCard from "./BlogCard";
-import img1 from "@/public/blog/b1.png";
 
-// const dataBlog = [
-//   {
-//     title: "كيف تختار تصميم موقع يعكس هوية علامتك التجارية؟",
-//     desc: "تصميم موقعك الإلكتروني هو أول انطباع يكوّنه العملاء عن علامتك التجارية، لذا يجب أن يكون احترافيًا ويعكس رؤيتك. في هذا المقال، سنساعدك على اختيار التصميم المثالي من خلال فهم عناصر الهوية البصرية، الألوان، الخطوط، وتجربة المستخدم لضمان موقع جذاب وفعّال. ",
-//     titleEn:
-//       "How to Choose a Website Design That Reflects Your Brand Identity?",
-//     descEn:
-//       "Your website design is the first impression customers have of your brand, so it should be professional and reflective of your vision. In this article, we will help you choose the perfect design by understanding visual identity elements, colors, fonts, and user experience to ensure an attractive and effective website.",
-//     image: img1,
-//   },
-//   {
-//     title: "كيف تختار تصميم موقع يعكس هوية علامتك التجارية؟",
-//     desc: "تصميم موقعك الإلكتروني هو أول انطباع يكوّنه العملاء عن علامتك التجارية، لذا يجب أن يكون احترافيًا ويعكس رؤيتك. في هذا المقال، سنساعدك على اختيار التصميم المثالي من خلال فهم عناصر الهوية البصرية، الألوان، الخطوط، وتجربة المستخدم لضمان موقع جذاب وفعّال. ",
-//     titleEn:
-//       "How to Choose a Website Design That Reflects Your Brand Identity?",
-//     descEn:
-//       "Your website design is the first impression customers have of your brand, so it should be professional and reflective of your vision. In this article, we will help you choose the perfect design by understanding visual identity elements, colors, fonts, and user experience to ensure an attractive and effective website.",
-//     image: img1,
-//   },
-//   {
-//     title: "كيف تختار تصميم موقع يعكس هوية علامتك التجارية؟",
-//     desc: "تصميم موقعك الإلكتروني هو أول انطباع يكوّنه العملاء عن علامتك التجارية، لذا يجب أن يكون احترافيًا ويعكس رؤيتك. في هذا المقال، سنساعدك على اختيار التصميم المثالي من خلال فهم عناصر الهوية البصرية، الألوان، الخطوط، وتجربة المستخدم لضمان موقع جذاب وفعّال. ",
-//     titleEn:
-//       "How to Choose a Website Design That Reflects Your Brand Identity?",
-//     descEn:
-//       "Your website design is the first impression customers have of your brand, so it should be professional and reflective of your vision. In this article, we will help you choose the perfect design by understanding visual identity elements, colors, fonts, and user experience to ensure an attractive and effective website.",
-//     image: img1,
-//   },
-// ];
+
+
 const BlogComp = ({ dataBlog }) => {
   const t = useTranslations();
 

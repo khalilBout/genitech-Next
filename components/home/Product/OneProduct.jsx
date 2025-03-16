@@ -3,48 +3,15 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import ReactMarkdown from "react-markdown";
 import React, { useState } from "react";
+import logoBg from "@/public/logoBg.webp";
 
-import logoBg from "@/public/logoBg.png";
-
-// import img1 from "@/public/product/p1.png";
-// import img2 from "@/public/product/p2.png";
-// import img3 from "@/public/product/p3.png";
 import CardProduct from "@/components/home/Product/CardProduct";
 import Image from "next/image";
 import GlryImg from "@/components/Ui/GlryImg";
 
-// const dataProfil = [
-//   {
-//     title: "نظام إدارة المحتوى المتكامل",
-//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-//     titleEn: "Integrated Content Management System",
-//     descEn:
-//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-//     image: img1,
-//   },
-//   {
-//     title: "نظام إدارة المحتوى المتكامل",
-//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-//     titleEn: "Integrated Content Management System",
-//     descEn:
-//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-//     image: img1,
-//   },
-//   {
-//     title: "نظام إدارة المحتوى المتكامل",
-//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-//     titleEn: "Integrated Content Management System",
-//     descEn:
-//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-//     image: img1,
-//   },
-// ];
-
 const OneProduct = ({ item, allProducts }) => {
   const t = useTranslations();
   const locale = useLocale();
-
-  const [indexMainImage, setIndexMainImage] = useState(0);
 
   return (
     <section className="screenPadding font-Title mt-28">
@@ -52,7 +19,7 @@ const OneProduct = ({ item, allProducts }) => {
         <h1 className="text-3xl text-primary"> {t("product.title")} </h1>
       </div>
 
-      <div className="my-8 flex flex-col-reverse mdl:flex-row justify-between items-center">
+      <div className="my-8 flex flex-col mdl:flex-row justify-between items-center">
         {/* info dev  */}
         <div className="w-full mdl:w-1/2 font-Title h-full flex flex-col justify-center">
           <h1 className="py-2 text-xl sm:text-2xl  xl:text-3xl text-primary mt-4 mdl:mt-16 xl:my-4">
@@ -60,51 +27,39 @@ const OneProduct = ({ item, allProducts }) => {
           </h1>
           <h1 className="text-slate-200 text-xl sm:text-2xl xl:text-3xl "></h1>
           <p className="text-slate-200 text-[12px] md:text-[14px] mdl:text-[14px] my-2">
-            {`${locale === "ar" ? item.description : item.description_en}...`}
+            {`${
+              locale === "ar"
+                ? item.description.slice(0, 240)
+                : item.description_en.slice(0, 240)
+            }...`}
           </p>
+          <a
+            href="#moreInfo"
+            className="mt-18 mdl:mt-26 w-[120px] text-center float-end px-2 py-1 rounded-md bg-primary text-slate-200 hover:bg-slate-200 hover:text-gray-950 transition-all duration-200 font-bold font-Title text-[15px] "
+          >
+            {t("product.btn")}
+          </a>
         </div>
 
         {/* image dev  */}
-        <div className=" w-full mdl:w-1/2 max-h-[600px] flex flex-col mdl:flex-row justify-center items-center">
-          <div className="m-2 w-full min-h-[380px] flex justify-center items-centers">
-            <GlryImg elm={item} />
-          </div>
-          {/* <div className=" flex mdl:flex-col justify-center items-center gap-2">
-            {dataProduct.image.map((elm, ind) => (
-              <button
-                key={ind}
-                onClick={() => setIndexMainImage(ind)}
-                className={`w-[60px] h-[60px] border-2 ${
-                  indexMainImage === ind
-                    ? "border-primary"
-                    : "border-transparent"
-                }`}
-                aria-label={`عرض الصورة ${ind + 1}`}
-              >
-                <Image
-                  src={elm}
-                  alt={`صورة ${ind + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </button>
-            ))}
-          </div> */}
+        <div className="m-1 w-full mdl:w-1/2 max-h-[600px] min-h-[380px] flex justify-center items-centers">
+          <GlryImg elm={item} />
         </div>
       </div>
 
       {/* details */}
 
-      <div className="">
+      <div id="moreInfo" className="mt-14 mdl:mt-24">
         <h1 className="text-slate-200 text-[18px] mdl:text-[22px] xl:text-[26px]">
           {t("product.detail")}
         </h1>
 
-        <div className="min-h-[660px] relative">
-          <p className="text-slate-200 text-[14px] md:text-[15px] xl:text-[16px]">
-            <ReactMarkdown>
-              {locale === "ar" ? item.description : item.description_en}
-            </ReactMarkdown>
-          </p>
+        <div className="min-h-[660px] relative text-slate-200">
+          {/* <p className="text-slate-200 text-[14px] md:text-[15px] xl:text-[16px]"> */}
+          <ReactMarkdown>
+            {locale === "ar" ? item.description : item.description_en}
+          </ReactMarkdown>
+          {/* </p> */}
           <div className=" absolute top-0 left-0 right-0">
             <Image src={logoBg} alt="logo Bg" className="h-full w-auto" />
           </div>

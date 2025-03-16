@@ -1,8 +1,8 @@
 "use client";
 import { useTranslations } from "next-intl";
 
-import bg1 from "@/public/blog/bg1.png";
-import heroBlog from "@/public/blog/heroBlog.png";
+import bg1 from "@/public/blog/bg1.webp";
+import heroBlog from "@/public/blog/heroBlog.webp";
 import BlogCard from "@/components/home/BlogComp/BlogCard";
 import Image from "next/image";
 

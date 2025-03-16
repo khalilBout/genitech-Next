@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import stepDesg from "@/public/design/stepDesg.png";
+import stepDesg from "@/public/design/stepDesg.webp";
 import Image from "next/image";
 
 const Steps = () => {

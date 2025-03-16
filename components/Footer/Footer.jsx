@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
 import logo from "@/public/logo.svg";
-import footerBg from "@/public/footerBg.png";
+import footerBg from "@/public/footerBg.webp";
 import Image from "next/image";
 
 const Footer = () => {

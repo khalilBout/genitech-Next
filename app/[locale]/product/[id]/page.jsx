@@ -3,9 +3,7 @@ import OneProduct from "@/components/home/Product/OneProduct";
 import { getProductById } from "@/utilit/getData/getProducts";
 import { getLastProducts } from "@/utilit/getData/getProducts";
 
-// import img1 from "@/public/product/p1.png";
-// import img2 from "@/public/product/p2.png";
-// import img3 from "@/public/product/p3.png";
+
 
 export async function generateMetadata({ params }) {
   const DetailsData = await getProductById(params.id);

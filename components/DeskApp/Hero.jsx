@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import deskHero from "@/public/deskApp/heroDesk.png";
+import deskHero from "@/public/deskApp/heroDesk.webp";
 
 const Hero = () => {
   const t = useTranslations();

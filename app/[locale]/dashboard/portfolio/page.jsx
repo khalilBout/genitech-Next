@@ -8,7 +8,7 @@ const pagePortfolioAdmin = async () => {
   //   const page = searchParams?.page || 1;
 
   const { allPortfolios } = await getPortfolios();
-  console.log("al Portfolioss serv", allPortfolios);
+  // console.log("al Portfolioss serv", allPortfolios);
   return (
     <div className="w-full font-Title overflow-auto">
       <div className="p-2  shadow-md  rounded-md">

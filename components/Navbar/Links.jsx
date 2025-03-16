@@ -35,7 +35,7 @@ const Links = ({ items }) => {
 
       {openLinkService && (
         <div className=" absolute top-[80px] w-screen left-1/2 transform -translate-x-1/2 bg-[#CEEBFD]">
-          <LinkService />
+          <LinkService setOpenLinkService={setOpenLinkService} />
         </div>
       )}
     </div>

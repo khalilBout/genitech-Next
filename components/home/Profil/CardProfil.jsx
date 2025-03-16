@@ -11,7 +11,7 @@ const CardProfil = ({ item }) => {
   // const lng = cookies.get("i18next") || "ar";
 
   return (
-    <div className=" relative m-4 flex max-w-[220px] h-[320px] bg-primary/30 rounded-md">
+    <div className=" relative m-4 flex w-[220px] h-[320px] bg-primary/30 rounded-md">
       {/* info div  */}
       <div className="w-[90%] h-[70%] rounded-md bg-primary/90 absolute z-20 -bottom-4 left-8 font-Title my-auto flex flex-col justify-center items-center">
         <h2 className="text-gray-900 p-2 text-[14px] font-bold text-center">

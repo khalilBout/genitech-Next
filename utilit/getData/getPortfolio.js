@@ -8,7 +8,6 @@ export const getPortfolios = async () => {
     await connectDB();
 
     const allPortfolio = await Portfolio.find();
-    console.log("prt from fetch function", allPortfolio);
 
     // تحويل البيانات إلى JSON للتخلص من ObjectId والمستندات غير المتسلسلة
     const portfolios = JSON.parse(JSON.stringify(allPortfolio));

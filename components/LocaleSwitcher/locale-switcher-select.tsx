@@ -27,9 +27,9 @@ export default function LocaleSwitcherSelect({
   }
 
   return (
-    <label className=" m-1 font-Title font-bold absolute -bottom-20 z-20 -left-4 px-2 bg-green-100 flex flex-col">
+    <label className="">
       <select
-        className="inline-flex appearance-none w-[70px] p-1 hover:text-primary"
+        className="inline-flex appearance-none bg-primary/30 hover:bg-primary rounded-full hover:text-slate-200 font-bold "
         defaultValue={defaultValue}
         disabled={isPending}
         onChange={onSelectChange}

@@ -5,7 +5,7 @@ import "next-cloudinary/dist/cld-video-player.css";
 
 const UploadImg = ({ setMainImg }) => {
   const handelSuccess = (result) => {
-    console.log("data image:", result.info.secure_url);
+    // console.log("data image:", result.info.secure_url);
     setMainImg(result.info.secure_url);
   };
   return (

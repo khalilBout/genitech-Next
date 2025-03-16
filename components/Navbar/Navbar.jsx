@@ -6,7 +6,7 @@ import Icons from "./Icons";
 import MobileLink from "./MobileLink";
 import { useState } from "react";
 import { RiMenu4Line } from "react-icons/ri";
-import LocaleSwitcher from "../LocaleSwitcher/locale-switcher";
+// import LocaleSwitcher from "../LocaleSwitcher/locale-switcher";
 
 const Navbar = () => {
   const t = useTranslations();

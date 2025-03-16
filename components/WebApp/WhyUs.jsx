@@ -1,10 +1,10 @@
 "use client";
 import { useTranslations } from "next-intl";
-import webWhy from "@/public/webApp/webWhy.png";
-import box1 from "@/public/icons/icon1.png";
-import box2 from "@/public/icons/icon2.png";
-import box3 from "@/public/icons/icon3.png";
-import box4 from "@/public/icons/icon4.png";
+import webWhy from "@/public/webApp/webWhy.webp";
+import box1 from "@/public/icons/icon1.webp";
+import box2 from "@/public/icons/icon2.webp";
+import box3 from "@/public/icons/icon3.webp";
+import box4 from "@/public/icons/icon4.webp";
 import Image from "next/image";
 const WhyUs = () => {
   const t = useTranslations();

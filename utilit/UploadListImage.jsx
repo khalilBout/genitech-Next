@@ -4,7 +4,7 @@ import { CldUploadButton } from "next-cloudinary";
 const UploadListImage = ({ setListImage }) => {
   const handelUpload = (result) => {
     const info = result.info;
-    console.log("info list img", info);
+    // console.log("info list img", info);
     // const publicId = result.public_id;
     if ("secure_url" in info && "public_id" in info) {
       // data of image

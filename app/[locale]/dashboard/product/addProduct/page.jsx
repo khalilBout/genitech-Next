@@ -34,7 +34,7 @@ const Page = () => {
   };
 
   const addProduct = async () => {
-    console.log("data sending:", dataProduct);
+    // console.log("data sending:", dataProduct);
     try {
       setPending(true);
       const res = await fetch("/api/product", {
@@ -59,7 +59,6 @@ const Page = () => {
   const handleDelete = (elm) => {
     setListImage((prevList) => prevList.filter((item) => item !== elm));
   };
-  console.log("list**Image", listImage);
 
   return (
     <div className="w-full px-4 my-8 mdl:my-12 text-slate-200 overflow-y-auto">

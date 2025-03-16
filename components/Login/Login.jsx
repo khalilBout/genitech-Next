@@ -37,11 +37,8 @@ const Login = () => {
     }
     // ============== Getting the value ==============
     if (email && password) {
-      console.log("start login");
-
       try {
         setLoading(true);
-        console.log("start login **", email);
         signIn("credentials", {
           email,
           password,

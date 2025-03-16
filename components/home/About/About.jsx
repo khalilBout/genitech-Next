@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import logo from "@/public/about/logo.png";
-import sport from "@/public/about/sport.png";
-import qlt from "@/public/about/qlt.png";
+import logo from "@/public/about/logo.webp";
+import sport from "@/public/about/sport.webp";
+import qlt from "@/public/about/qlt.webp";
 import Image from "next/image";
 const About = () => {
   const t = useTranslations();

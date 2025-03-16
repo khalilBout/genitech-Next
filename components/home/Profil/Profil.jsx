@@ -1,36 +1,9 @@
 "use client";
 import { useTranslations } from "next-intl";
 import CardProfil from "./CardProfil";
-import img1 from "@/public/product/p1.png";
 import Slider from "react-slick";
 import ImageSlider from "@/components/Ui/SlidAuto";
 
-// const dataProfil = [
-//   {
-//     title: "نظام إدارة المحتوى المتكامل",
-//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-//     titleEn: "Integrated Content Management System",
-//     descEn:
-//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-//     image: img1,
-//   },
-//   {
-//     title: "نظام إدارة المحتوى المتكامل",
-//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-//     titleEn: "Integrated Content Management System",
-//     descEn:
-//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-//     image: img1,
-//   },
-//   {
-//     title: "نظام إدارة المحتوى المتكامل",
-//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-//     titleEn: "Integrated Content Management System",
-//     descEn:
-//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-//     image: img1,
-//   },
-// ];
 const Profil = ({ allPortfolios }) => {
   const t = useTranslations();
 

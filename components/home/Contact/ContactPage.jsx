@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import msgConatct from "@/public/conatct/msg.png";
+import msgConatct from "@/public/conatct/msg.webp";
 import FormContact from "./FormContact";
 import Image from "next/image";
 
