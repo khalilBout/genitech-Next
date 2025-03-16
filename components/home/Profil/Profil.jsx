@@ -5,33 +5,33 @@ import img1 from "@/public/product/p1.png";
 import Slider from "react-slick";
 import ImageSlider from "@/components/Ui/SlidAuto";
 
-const dataProfil = [
-  {
-    title: "نظام إدارة المحتوى المتكامل",
-    desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-    titleEn: "Integrated Content Management System",
-    descEn:
-      "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-    image: img1,
-  },
-  {
-    title: "نظام إدارة المحتوى المتكامل",
-    desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-    titleEn: "Integrated Content Management System",
-    descEn:
-      "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-    image: img1,
-  },
-  {
-    title: "نظام إدارة المحتوى المتكامل",
-    desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-    titleEn: "Integrated Content Management System",
-    descEn:
-      "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-    image: img1,
-  },
-];
-const Profil = () => {
+// const dataProfil = [
+//   {
+//     title: "نظام إدارة المحتوى المتكامل",
+//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
+//     titleEn: "Integrated Content Management System",
+//     descEn:
+//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
+//     image: img1,
+//   },
+//   {
+//     title: "نظام إدارة المحتوى المتكامل",
+//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
+//     titleEn: "Integrated Content Management System",
+//     descEn:
+//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
+//     image: img1,
+//   },
+//   {
+//     title: "نظام إدارة المحتوى المتكامل",
+//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
+//     titleEn: "Integrated Content Management System",
+//     descEn:
+//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
+//     image: img1,
+//   },
+// ];
+const Profil = ({ allPortfolios }) => {
   const t = useTranslations();
 
   var settings = {
@@ -84,7 +84,7 @@ const Profil = () => {
       <div className="w-full flex justify-between items-center gap-4 ">
         <div className=" w-[60%] sml:w-[80%] lg:w-[70%] mx-auto my-4 ">
           <Slider {...settings}>
-            {dataProfil.map((item, ind) => (
+            {allPortfolios?.map((item, ind) => (
               <CardProfil key={ind} item={item} />
             ))}
           </Slider>

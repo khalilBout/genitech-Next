@@ -9,7 +9,7 @@ const TableAllProduct = ({ data }) => {
   return (
     <>
       <table
-        className="w-full min-w-[540px]"
+        className="w-full "
         data-tab-for="product"
         data-page="active"
       >

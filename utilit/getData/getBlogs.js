@@ -1,36 +1,3 @@
-const API_URL = process.env.GLOBAL_URL || "http://localhost:3000";
-
-// export const getBlogById = async (id) => {
-//   try {
-//     const res = await fetch(`${API_URL}/api/blog/${id}`, {
-//       method: "GET",
-//       // cache: "no-store",
-//     });
-//     if (!res.ok) {
-//       throw new Error(`HTTP error! status: ${res.status}`);
-//     }
-//     const data = await res.json();
-//     return data;
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
-
-// export const getBlogs = async () => {
-//   try {
-//     const res = await fetch(`${API_URL}/api/blog`, {
-//       method: "GET",
-//       // cache: "no-store",
-//     });
-
-//     const data = await res.json();
-
-//     return data;
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
-
 import Blog from "@/models/blog";
 import connectDB from "@/utilit/connectDB";
 
@@ -39,14 +6,16 @@ export const dynamic = "force-dynamic";
 export const getBlogs = async () => {
   try {
     await connectDB();
+
     const allBlog = await Blog.find();
 
-    // إرجاع مصفوفة فارغة إذا لم يتم العثور على أي مدونات
-    return { AllBlogs: allBlog.length > 0 ? allBlog : [] };
+    // تحويل البيانات إلى JSON للتخلص من ObjectId والمستندات غير المتسلسلة
+    const blogs = JSON.parse(JSON.stringify(allBlog));
+
+    return { AllBlogs: blogs.length > 0 ? blogs : [] };
   } catch (err) {
     console.error("Error fetching blogs:", err);
-    // إرجاع مصفوفة فارغة في حالة حدوث خطأ بدلاً من كسر التطبيق
-    return { AllBlogs: [] };
+    return { AllBlogs: [] }; // إرجاع مصفوفة فارغة عند حدوث خطأ
   }
 };
 
@@ -62,5 +31,23 @@ export const getBlogById = async (id) => {
   } catch (err) {
     console.error("Error fetching blog:", err);
     throw new Error("Error fetching blog");
+  }
+};
+
+export const getLastBlogs = async () => {
+  try {
+    await connectDB(); // الاتصال بقاعدة البيانات
+
+    const lastBlog = await Blog.find()
+      .sort({ createdAt: -1 }) // ترتيب تنازلي لجلب آخر 3 مدونات
+      .limit(3); // جلب آخر 3 فقط
+
+    // تحويل البيانات إلى JSON للتخلص من ObjectId والمستندات غير المتسلسلة
+    const blogs = JSON.parse(JSON.stringify(lastBlog));
+
+    return { AllBlogs: blogs.length > 0 ? blogs : [] };
+  } catch (err) {
+    console.error("Error fetching blogs:", err);
+    return { AllBlogs: [] }; // إرجاع مصفوفة فارغة عند حدوث خطأ
   }
 };

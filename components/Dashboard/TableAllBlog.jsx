@@ -7,7 +7,7 @@ const TableAllBlog = ({ data }) => {
   return (
     <>
       <table
-        className="w-full min-w-[540px]"
+        className="w-full"
         data-tab-for="product"
         data-page="active"
       >
@@ -16,7 +16,7 @@ const TableAllBlog = ({ data }) => {
             <th className="max-w-[120px] text-[15px] font-Title px-2 text-right font-bold text-slate-200 p-2">
               الصورة
             </th>
-            <th className="text-[15px] font-Title text-right font-bold text-slate-200 p-2">
+            <th className="text-[15px] font-Title text-center font-bold text-slate-200 p-2">
               العنوان
             </th>
             <th className="text-[15px] font-Title text-center font-bold text-slate-200 p-2">

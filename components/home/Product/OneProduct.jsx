@@ -6,40 +6,41 @@ import React, { useState } from "react";
 
 import logoBg from "@/public/logoBg.png";
 
-import img1 from "@/public/product/p1.png";
-import img2 from "@/public/product/p2.png";
-import img3 from "@/public/product/p3.png";
+// import img1 from "@/public/product/p1.png";
+// import img2 from "@/public/product/p2.png";
+// import img3 from "@/public/product/p3.png";
 import CardProduct from "@/components/home/Product/CardProduct";
 import Image from "next/image";
+import GlryImg from "@/components/Ui/GlryImg";
 
-const dataProfil = [
-  {
-    title: "نظام إدارة المحتوى المتكامل",
-    desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-    titleEn: "Integrated Content Management System",
-    descEn:
-      "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-    image: img1,
-  },
-  {
-    title: "نظام إدارة المحتوى المتكامل",
-    desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-    titleEn: "Integrated Content Management System",
-    descEn:
-      "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-    image: img1,
-  },
-  {
-    title: "نظام إدارة المحتوى المتكامل",
-    desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
-    titleEn: "Integrated Content Management System",
-    descEn:
-      "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
-    image: img1,
-  },
-];
+// const dataProfil = [
+//   {
+//     title: "نظام إدارة المحتوى المتكامل",
+//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
+//     titleEn: "Integrated Content Management System",
+//     descEn:
+//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
+//     image: img1,
+//   },
+//   {
+//     title: "نظام إدارة المحتوى المتكامل",
+//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
+//     titleEn: "Integrated Content Management System",
+//     descEn:
+//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
+//     image: img1,
+//   },
+//   {
+//     title: "نظام إدارة المحتوى المتكامل",
+//     desc: "تحكم كامل في موقعك الإلكتروني بسهولة وأمان مع نظام مرن يتيح لك إدارة المحتوى، المقالات، المنتجات، والصفحات بواجهة بسيطة وسريعة.",
+//     titleEn: "Integrated Content Management System",
+//     descEn:
+//       "Take full control of your website easily and securely with a flexible system that allows you to manage content, articles, products, and pages through a simple and fast interface.",
+//     image: img1,
+//   },
+// ];
 
-const OneProduct = ({ dataProduct }) => {
+const OneProduct = ({ item, allProducts }) => {
   const t = useTranslations();
   const locale = useLocale();
 
@@ -55,28 +56,20 @@ const OneProduct = ({ dataProduct }) => {
         {/* info dev  */}
         <div className="w-full mdl:w-1/2 font-Title h-full flex flex-col justify-center">
           <h1 className="py-2 text-xl sm:text-2xl  xl:text-3xl text-primary mt-4 mdl:mt-16 xl:my-4">
-            {locale === "ar" ? dataProduct.title : dataProduct.titleEn}
+            {locale === "ar" ? item.title : item.title_en}
           </h1>
           <h1 className="text-slate-200 text-xl sm:text-2xl xl:text-3xl "></h1>
           <p className="text-slate-200 text-[12px] md:text-[14px] mdl:text-[14px] my-2">
-            {`${
-              locale === "ar"
-                ? dataProduct.desc.slice(0, 280)
-                : dataProduct.descEn.slice(0, 280)
-            }...`}
+            {`${locale === "ar" ? item.description : item.description_en}...`}
           </p>
         </div>
 
         {/* image dev  */}
         <div className=" w-full mdl:w-1/2 max-h-[600px] flex flex-col mdl:flex-row justify-center items-center">
-          <div className="m-2 w-[70%] h-[70%] flex justify-center items-centers">
-            <Image
-              src={dataProduct.image[indexMainImage]}
-              alt={dataProduct.titleEn}
-              className="mt-8 w-[50%] h-auto"
-            />
+          <div className="m-2 w-full min-h-[380px] flex justify-center items-centers">
+            <GlryImg elm={item} />
           </div>
-          <div className=" flex mdl:flex-col justify-center items-center gap-2">
+          {/* <div className=" flex mdl:flex-col justify-center items-center gap-2">
             {dataProduct.image.map((elm, ind) => (
               <button
                 key={ind}
@@ -95,7 +88,7 @@ const OneProduct = ({ dataProduct }) => {
                 />
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -109,7 +102,7 @@ const OneProduct = ({ dataProduct }) => {
         <div className="min-h-[660px] relative">
           <p className="text-slate-200 text-[14px] md:text-[15px] xl:text-[16px]">
             <ReactMarkdown>
-              {locale === "ar" ? dataProduct.desc : dataProduct.descEn}
+              {locale === "ar" ? item.description : item.description_en}
             </ReactMarkdown>
           </p>
           <div className=" absolute top-0 left-0 right-0">
@@ -124,7 +117,7 @@ const OneProduct = ({ dataProduct }) => {
         {t("product.ourWork")}
       </h1>
       <div className="flex flex-wrap justify-center items-center gap-2 my-4">
-        {dataProfil.map((item, ind) => (
+        {allProducts?.map((item, ind) => (
           <CardProduct key={ind} item={item} />
         ))}
       </div>
