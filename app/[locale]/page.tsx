@@ -14,7 +14,12 @@ import { getPortfolios } from "@/utilit/getData/getPortfolio";
 import { getProducts } from "@/utilit/getData/getProducts";
 import { getLastBlogs } from "@/utilit/getData/getBlogs";
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
 const Home = async () => {
+  if (!baseUrl) {
+    return null;
+  }
   const { allPortfolios } = await getPortfolios();
   const { allProducts } = await getProducts();
   const { AllBlogs } = await getLastBlogs();
