@@ -108,7 +108,6 @@ export default function combinedMiddleware(req) {
 export const config = {
   matcher: [
     "/",
-    "/login",
     "/(ar|en)/:path*",
     "/dashboard/:path*",
     "/en/dashboard/:path*",
