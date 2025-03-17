@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getBlogs } from "@/utilit/getData/getBlogs";
-import TableAllBlog from "@/components/dashboard/TableAllBlog";
+import TableAllBlog from "@/components/Dashboard/TableAllBlog";
 import EmptyView from "@/components/Ui/EmptyView";
 
 const pageBlogAdmin = async () => {
