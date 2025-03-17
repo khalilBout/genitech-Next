@@ -55,21 +55,22 @@
 //     "/ar/dashboard/:path*",
 //   ],
 // };
+
 import createMiddleware from "next-intl/middleware";
 import { withAuth } from "next-auth/middleware";
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+// import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 
-// إعداد التعدد اللغوي
+// إعدادات التعدد اللغوي
 const intlMiddleware = createMiddleware({
   locales: ["en", "ar"],
   defaultLocale: "en",
 });
 
 // حماية لوحة التحكم باستخدام next-auth
-export default withAuth(
-  async function middleware(req: NextRequest) {
+const authMiddleware = withAuth(
+  async function middleware(req) {
     const token = await getToken({ req });
 
     // حماية لوحة التحكم
@@ -89,6 +90,19 @@ export default withAuth(
     },
   }
 );
+
+// الجمع بين التعدد اللغوي والحماية الخاصة بلوحة التحكم
+export default function combinedMiddleware(req) {
+  if (
+    req.nextUrl.pathname.startsWith("/dashboard") ||
+    req.nextUrl.pathname.startsWith("/en/dashboard") ||
+    req.nextUrl.pathname.startsWith("/ar/dashboard")
+  ) {
+    // تمرير الطلب إلى authMiddleware
+    return authMiddleware(req);
+  }
+  return intlMiddleware(req);
+}
 
 // تحديد المسارات التي يتم تطبيق `middleware` عليها
 export const config = {

@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import CardProduct from "./CardProduct";
 import Slider from "react-slick";
+import EmptyView from "@/components/Ui/EmptyView";
 
 const Product = ({ allProducts }) => {
   const t = useTranslations();
@@ -53,11 +54,15 @@ const Product = ({ allProducts }) => {
         {t("product.desc")}
       </p>
       <div className="w-full md:w-[80%] lg:w-[90%] xl:w-full mx-auto my-4">
-        <Slider {...settings}>
-          {allProducts?.map((item, ind) => (
-            <CardProduct key={ind} item={item} />
-          ))}
-        </Slider>
+        {allProducts?.length > 0 ? (
+          <Slider {...settings}>
+            {allProducts?.map((item, ind) => (
+              <CardProduct key={ind} item={item} />
+            ))}
+          </Slider>
+        ) : (
+          <EmptyView />
+        )}
       </div>
     </div>
   );

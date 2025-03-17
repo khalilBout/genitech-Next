@@ -2,8 +2,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import BlogCard from "./BlogCard";
-
-
+import EmptyView from "@/components/Ui/EmptyView";
 
 const BlogComp = ({ dataBlog }) => {
   const t = useTranslations();
@@ -23,9 +22,11 @@ const BlogComp = ({ dataBlog }) => {
       </div>
       {/* image  */}
       <div className="my-8 flex justify-center items-center flex-wrap gap-2">
-        {dataBlog.map((item, ind) => (
-          <BlogCard key={ind} item={item} />
-        ))}
+        {dataBlog?.length > 0 ? (
+          dataBlog?.map((item, ind) => <BlogCard key={ind} item={item} />)
+        ) : (
+          <EmptyView />
+        )}
       </div>
     </div>
   );

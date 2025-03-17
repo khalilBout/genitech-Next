@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import CardProfil from "./CardProfil";
 import Slider from "react-slick";
 import ImageSlider from "@/components/Ui/SlidAuto";
+import EmptyView from "@/components/Ui/EmptyView";
 
 const Profil = ({ allPortfolios }) => {
   const t = useTranslations();
@@ -56,11 +57,15 @@ const Profil = ({ allPortfolios }) => {
       </h1>
       <div className="w-full flex justify-between items-center gap-4 ">
         <div className=" w-[60%] sml:w-[80%] lg:w-[70%] mx-auto my-4 ">
-          <Slider {...settings}>
-            {allPortfolios?.map((item, ind) => (
-              <CardProfil key={ind} item={item} />
-            ))}
-          </Slider>
+          {allPortfolios?.length > 0 ? (
+            <Slider {...settings}>
+              {allPortfolios?.map((item, ind) => (
+                <CardProfil key={ind} item={item} />
+              ))}
+            </Slider>
+          ) : (
+            <EmptyView />
+          )}
         </div>
         {/* image div  */}
         <div className=" hidden lg:flex justify-center items-center lg:w-[30%] h-full">
