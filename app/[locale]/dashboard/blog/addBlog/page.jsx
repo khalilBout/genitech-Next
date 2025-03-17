@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import FormAddBlog from "@/utilit/Forms/FormAddBlog";
 import UploadImg from "@/utilit/UploadImg";
-import UploadListImage from "@/utilit/UploadListImage";
+// import UploadListImage from "@/utilit/UploadListImage";
 import { useRouter } from "next/navigation";
 import Loading from "@/utilit/Loading";
 import Image from "next/image";
@@ -80,7 +80,7 @@ const Page = () => {
                 <UploadImg setMainImg={setMainImg} />
               )}
             </div>
-            <div className="flex-1">
+            {/* <div className="flex-1">
               {listImage.length > 0 ? (
                 <div>
                   <h1 className="py-4 text-xl font-Title">صور إضافية</h1>
@@ -104,7 +104,7 @@ const Page = () => {
                   setListImage={setListImage}
                 />
               )}
-            </div>
+            </div> */}
           </div>
 
           <div className="mt-6 flex justify-center">

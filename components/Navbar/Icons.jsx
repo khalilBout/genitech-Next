@@ -4,7 +4,7 @@ import React, { useState } from "react";
 // import i18n from "i18next";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLanguageSharp } from "react-icons/io5";
-
+import { MdAdminPanelSettings } from "react-icons/md";
 import LocaleSwitcher from "../LocaleSwitcher/locale-switcher";
 import Link from "next/link";
 // import { useTranslations } from "next-intl";
@@ -16,6 +16,7 @@ import { TbLogout } from "react-icons/tb";
 
 // import LocaleSwitcherSelect from "./locale-switcher-select";
 import { locales } from "@/config";
+import LocalizedLink from "../Ui/LocalizedLink";
 
 const Icons = () => {
   const session = useSession();
@@ -26,12 +27,20 @@ const Icons = () => {
   return (
     <div className="flex justify-center items-center">
       {session && session.status === "authenticated" ? (
-        <Link
-          className="bg-primary/30 hover:bg-primary m-1 w-8 h-8 p-1 rounded-full flex justify-center items-center"
-          href="/api/auth/signout?callbackUrl=/"
-        >
-          <TbLogout size={20} className="text-black" />
-        </Link>
+        <>
+          <LocalizedLink
+            className="bg-primary/30 hover:bg-primary m-1 w-8 h-8 p-1 rounded-full flex justify-center items-center"
+            href="/dashboard"
+          >
+            <MdAdminPanelSettings size={20} className="text-black" />
+          </LocalizedLink>
+          <Link
+            className="bg-primary/30 hover:bg-primary m-1 w-8 h-8 p-1 rounded-full flex justify-center items-center"
+            href="/api/auth/signout?callbackUrl=/"
+          >
+            <TbLogout size={20} className="text-black" />
+          </Link>
+        </>
       ) : (
         <>
           <button className="text-[14px] font-Title font-bold hidden mdl:block">
