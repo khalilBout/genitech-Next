@@ -10,13 +10,9 @@ const intlMiddleware = createMiddleware({
 
 export async function middleware(req) {
   const token = await getToken({ req });
-  // console.log("token from middleware:", token);
+  console.log("token from middleware:", token);
   // إذا كان المستخدم يحاول الوصول إلى لوحة التحكم وليس لديه صلاحية الأدمن، يتم توجيهه إلى الصفحة الرئيسية
-  if (
-    req.nextUrl.pathname.startsWith("/dashboard") ||
-    req.nextUrl.pathname.startsWith("/en/dashboard") ||
-    (req.nextUrl.pathname.startsWith("/ar/dashboard") && token === null)
-  ) {
+  if (req.nextUrl.pathname.startsWith("/(ar|en)/dashboard") && token === null) {
     return NextResponse.redirect(new URL("/", req.url));
     // return intlMiddleware(req);
   }
