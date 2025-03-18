@@ -6,8 +6,8 @@ const GlryImg = ({ elm }) => {
   const [mainImg, setMainImg] = useState(elm?.mainImg);
 
   return (
-    <div className="">
-      <div className="w-full min-w-[400px] min-h-[320px] relative flex justify-center items-center">
+    <div className="w-full flex flex-col gap-4 justify-center items-center">
+      <div className=" w-[90%] min-h-[420px] relative flex justify-center items-center">
         <Image
           src={mainImg}
           alt={elm.title_en}
@@ -16,27 +16,29 @@ const GlryImg = ({ elm }) => {
         />
       </div>
       <div className=" flex justify-center items-center flex-wrap gap-2 m-2">
-        <Image
-          src={elm.mainImg}
-          alt={elm.title}
-          quality={100}
-          width={120}
-          height={90}
-          className=" cursor-pointer object-cover"
-          onClick={() => {
-            setMainImg(elm.mainImg);
-          }}
-        />
-
+        <div className=" relative w-[80px] h-[80px] mdl:w-[120px] mdl:h-[120px] ">
+          <Image
+            src={elm.mainImg}
+            alt={elm.title}
+            quality={100}
+            fill
+            className="cursor-pointer object-fill"
+            onClick={() => {
+              setMainImg(elm.mainImg);
+            }}
+          />
+        </div>
         {elm?.listImage?.map((item, ind) => (
-          <div key={ind} className=" w-[120px] h-[90px]">
+          <div
+            key={ind}
+            className=" relative w-[80px] h-[80px] mdl:w-[120px] mdl:h-[120px] "
+          >
             <Image
               src={item}
               alt={ind}
-              width={120}
-              height={90}
               quality={80}
-              className=" cursor-pointer object-cover"
+              fill
+              className=" cursor-pointer object-fill"
               onClick={() => {
                 setMainImg(item);
               }}

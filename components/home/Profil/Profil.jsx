@@ -27,7 +27,7 @@ const Profil = ({ allPortfolios }) => {
         },
       },
       {
-        breakpoint: 860,
+        breakpoint: 960,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -36,7 +36,7 @@ const Profil = ({ allPortfolios }) => {
         },
       },
       {
-        breakpoint: 560,
+        breakpoint: 660,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -56,7 +56,7 @@ const Profil = ({ allPortfolios }) => {
         {t("profil.title2")}
       </h1>
       <div className="w-full flex justify-between items-center gap-4 ">
-        <div className=" w-[60%] sml:w-[80%] lg:w-[70%] mx-auto my-4 ">
+        <div className=" w-[90%] mdl:w-[80%]  lg:w-[70%] mx-auto my-4 ">
           {allPortfolios?.length > 0 ? (
             <Slider {...settings}>
               {allPortfolios?.map((item, ind) => (

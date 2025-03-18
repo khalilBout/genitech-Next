@@ -1,6 +1,6 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
-
+import LocalizedLink from "@/components/Ui/LocalizedLink";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
@@ -56,29 +56,29 @@ const Footer = () => {
             </h2>
             <ul className="text-[14px] ">
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/mobileapp" className="">
                   {t("footer.service.srv-1")}
-                </a>
+                </LocalizedLink>
               </li>
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/webapp" className="">
                   {t("footer.service.srv-2")}
-                </a>
+                </LocalizedLink>
               </li>
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/deskapp" className="">
                   {t("footer.service.srv-3")}
-                </a>
+                </LocalizedLink>
               </li>
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/design" className="">
                   {t("footer.service.srv-4")}
-                </a>
+                </LocalizedLink>
               </li>
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/design" className="">
                   {t("footer.service.srv-5")}
-                </a>
+                </LocalizedLink>
               </li>
             </ul>
           </div>
@@ -89,29 +89,29 @@ const Footer = () => {
             </h2>
             <ul className="text-[14px] ">
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/" className="">
                   {t("footer.links.link-1")}
-                </a>
+                </LocalizedLink>
               </li>
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/" className="">
                   {t("footer.links.link-2")}
-                </a>
+                </LocalizedLink>
               </li>
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/blog" className="">
                   {t("footer.links.link-3")}
-                </a>
+                </LocalizedLink>
               </li>
               <li className="my-1">
-                <a href="" className="">
+                <a href="/#contact" className="">
                   {t("footer.links.link-4")}
                 </a>
               </li>
               <li className="my-1">
-                <a href="" className="">
+                <LocalizedLink href="/" className="">
                   {t("footer.links.link-5")}
-                </a>
+                </LocalizedLink>
               </li>
             </ul>
           </div>
@@ -124,19 +124,19 @@ const Footer = () => {
           <ul className="text-[14px] ">
             <li className="my-1 flex gap-2 items-start">
               <FaLocationDot className="text-primary " size={18} />
-              <a href="" className="">
+              <a href="/" className="">
                 {t("footer.contact.add")}
               </a>
             </li>
             <li className="my-1 flex gap-2 items-center">
               <FaPhoneAlt className="text-primary " size={18} />
-              <a href="" className="">
+              <a href="/" className="">
                 {t("footer.contact.phone")}
               </a>
             </li>
             <li className="my-1 flex gap-2 items-center">
               <MdMarkEmailRead className="text-primary " size={18} />
-              <a href="" className="">
+              <a href="/" className="">
                 {t("footer.contact.email")}
               </a>
             </li>

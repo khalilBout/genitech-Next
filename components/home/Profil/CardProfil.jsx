@@ -12,10 +12,10 @@ const CardProfil = ({ item }) => {
   // const lng = cookies.get("i18next") || "ar";
 
   return (
-    <div className=" relative m-4 flex w-[220px] h-[320px] bg-primary/30 rounded-md">
+    <div className=" relative m-4 flex w-[210px] h-[320px] bg-primary/30 rounded-md">
       {/* info div  */}
-      <div className="w-[90%] h-[80%] rounded-md bg-primary/90 absolute z-20 -bottom-4 left-8 font-Title my-auto flex flex-col justify-between items-stretch text-gray-500 text-center px-2">
-        <h2 className=" py-2 text-blue-950 text-[15px] mdl:text-[17px] font-bold text-center">
+      <div className="w-[100%] h-[80%] rounded-md bg-primary/90 absolute z-20 -bottom-4 left-6 font-Title my-auto flex flex-col justify-between items-stretch text-gray-950 text-center px-2">
+        <h2 className=" py-2 text-blue-950 text-[15px] mdl:text-[16px] font-bold text-center">
           {`${
             locale === "ar"
               ? item?.title.slice(0, 40)

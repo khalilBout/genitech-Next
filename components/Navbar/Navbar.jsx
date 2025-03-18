@@ -41,15 +41,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="screenPadding fixed z-50 top-4 bg-[#CEEBFD] h-[50px] mdl:h-[72px] w-full flex justify-between items-center ">
+    <nav className="screenPadding  fixed z-50 top-4 left-0 right-0 bg-[#CEEBFD] h-[50px] mdl:h-[72px] flex justify-between items-center ">
       {/* logo sect  */}
       <Logo />
       <Links items={LinkData} />
-      {open && <MobileLink items={LinkData} />}
-      <div className="flex">
+      {open && <MobileLink items={LinkData} setOpen={setOpen} />}
+      <div className="flex ">
         <Icons />
         <button className="mdl:hidden" onClick={() => setOpen(!open)}>
-          <RiMenu4Line size={22} />
+          <RiMenu4Line size={20} />
         </button>
       </div>
     </nav>

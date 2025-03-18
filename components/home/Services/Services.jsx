@@ -7,6 +7,7 @@ import mbl from "@/public/services/mbl.webp";
 import web from "@/public/services/web.webp";
 import Link from "next/link";
 import Image from "next/image";
+import LocalizedLink from "@/components/Ui/LocalizedLink";
 
 const Services = () => {
   const t = useTranslations();
@@ -17,33 +18,36 @@ const Services = () => {
       image: mbl,
       title: t("services.servis-1.title"),
       desc: t("services.servis-1.desc"),
-      link: "/#",
+      link: "/mobileapp",
     },
     {
       id: 2,
       image: web,
       title: t("services.servis-2.title"),
       desc: t("services.servis-2.desc"),
-      link: "/#",
+      link: "/webapp",
     },
     {
       id: 3,
       image: dst,
       title: t("services.servis-3.title"),
       desc: t("services.servis-3.desc"),
-      link: "/#",
+      link: "/deskapp",
     },
     {
       id: 4,
       image: dsg,
       title: t("services.servis-4.title"),
       desc: t("services.servis-4.desc"),
-      link: "/#",
+      link: "/design",
     },
   ];
 
   return (
-    <div className="my-14 mdl:my-24 flex flex-col justify-center items-center gap-8">
+    <div
+      id="services"
+      className="my-14 mdl:my-24 flex flex-col justify-center items-center gap-8"
+    >
       {/* hero title  */}
       <div className="flex flex-col gap-2 justify-center items-center">
         <motion.h1
@@ -77,8 +81,8 @@ const Services = () => {
       <div className="flex justify-center items-center ">
         <div className="grid grid-cols-1 mdl:grid-cols-2 gap-16 p-4 w-full max-w-mdl sm:max-w-lg md:max-w-xl">
           {serverData.map((elm, ind) => (
-            <Link
-              href="/"
+            <LocalizedLink
+              href={elm.link}
               key={ind}
               className=" relative h-[300px] max-w-[230px] "
             >
@@ -119,7 +123,7 @@ const Services = () => {
                   {elm.desc}
                 </p>
               </motion.div>
-            </Link>
+            </LocalizedLink>
           ))}
         </div>
       </div>

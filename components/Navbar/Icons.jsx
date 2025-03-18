@@ -25,31 +25,34 @@ const Icons = () => {
   const [opneLeng, setOpneLeng] = useState(false);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className=" flex justify-center items-center">
       {session && session.status === "authenticated" ? (
         <>
           <LocalizedLink
-            className="bg-primary/30 hover:bg-primary m-1 w-8 h-8 p-1 rounded-full flex justify-center items-center"
+            className="bg-primary/30 hover:bg-primary m-1 w-7 h-7 p-1 rounded-full flex justify-center items-center"
             href="/dashboard"
           >
-            <MdAdminPanelSettings size={20} className="text-black" />
+            <MdAdminPanelSettings size={18} className="text-black" />
           </LocalizedLink>
           <Link
-            className="bg-primary/30 hover:bg-primary m-1 w-8 h-8 p-1 rounded-full flex justify-center items-center"
+            className="bg-primary/30 hover:bg-primary m-1 w-7 h-7 p-1 rounded-full flex justify-center items-center"
             href="/api/auth/signout?callbackUrl=/"
           >
-            <TbLogout size={20} className="text-black" />
+            <TbLogout size={18} className="text-black" />
           </Link>
         </>
       ) : (
         <>
-          <button className="text-[14px] font-Title font-bold hidden mdl:block">
+          <Link
+            href="https://wa.me/963956495873"
+            className="text-[14px] font-Title font-bold hidden mdl:block"
+          >
             <span className=" px-3 py-1 h-[30px] bg-primary/30 hover:bg-primary/90 rounded-md ">
               {t("link.btn")}
             </span>
-          </button>
-          <button className="bg-primary/30 hover:bg-primary m-1 w-8 h-8 p-1 rounded-full flex justify-center items-center mdl:hidden">
-            <Link href="https://wa.me/963932661816">
+          </Link>
+          <button className="bg-primary/30 hover:bg-primary m-1 w-7 h-7 p-1 rounded-full flex justify-center items-center mdl:hidden">
+            <Link href="https://wa.me/963956495873">
               <FaWhatsapp size={20} />
             </Link>
           </button>
@@ -58,7 +61,7 @@ const Icons = () => {
 
       <div className=" relative">
         <button
-          className=" bg-primary/30 hover:bg-primary rounded-full m-1 mdl:m-2 w-8 h-8 p-1 flex justify-center items-center font-Title font-bold"
+          className=" bg-primary/30 hover:bg-primary rounded-full m-1 mdl:m-2 w-7 h-7 p-1 flex justify-center items-center font-Title font-bold"
           onClick={() => setOpneLeng(!opneLeng)}
         >
           {/* <IoLanguageSharp size={17} /> */}

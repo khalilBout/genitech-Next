@@ -61,12 +61,18 @@ const Hero = () => {
           }}
           className="mt-12 flex justify-end gap-4"
         >
-          <button className="px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-slate-200 hover:bg-primary hover:text-black cursor-pointer duration-150 transition-all font-bold">
+          <a
+            href="/#contact"
+            className="px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-slate-200 hover:bg-primary hover:text-black cursor-pointer duration-150 transition-all font-bold"
+          >
             {t("hero.btn-1")}
-          </button>
-          <button className="px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-black bg-primary hover:text-primary hover:bg-transparent cursor-pointer duration-150 transition-all font-bold">
+          </a>
+          <a
+            href="/#services"
+            className="px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-black bg-primary hover:text-primary hover:bg-transparent cursor-pointer duration-150 transition-all font-bold"
+          >
             {t("hero.btn-2")}
-          </button>
+          </a>
         </motion.div>
       </div>
 

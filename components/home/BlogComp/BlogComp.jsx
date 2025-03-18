@@ -3,6 +3,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import BlogCard from "./BlogCard";
 import EmptyView from "@/components/Ui/EmptyView";
+import LocalizedLink from "@/components/Ui/LocalizedLink";
 
 const BlogComp = ({ dataBlog }) => {
   const t = useTranslations();
@@ -15,10 +16,12 @@ const BlogComp = ({ dataBlog }) => {
           <span className="text-primary ">{t("blogComp.title")} </span>
           {t("blogComp.span")}
         </h1>
-        <button className="text-[13px] mdl:text-[15px] bg-primary px-1 mdl:px-2 py-1 min-w-[100px] h-[35px] cursor-pointer rounded-md font-bold text-gray-950  ">
-          {" "}
+        <LocalizedLink
+          href="/blog"
+          className="text-center text-[13px] mdl:text-[15px] bg-primary  py-1 min-w-[90px] h-[35px] rounded-md font-bold text-gray-950"
+        >
           {t("blogComp.btn")}
-        </button>
+        </LocalizedLink>
       </div>
       {/* image  */}
       <div className="my-8 flex justify-center items-center flex-wrap gap-2">
