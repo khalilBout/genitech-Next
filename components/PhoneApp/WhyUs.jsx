@@ -19,9 +19,9 @@ const WhyUs = () => {
     <section className="screenPadding relative flex justify-center items-center max-mdl:my-4">
       {/* image dev  */}
       <div className="max-mdl:absolute max-mdl:top-1/2 max-mdl:left-1/2 max-mdl:transform max-mdl:-translate-x-1/2 max-mdl:-translate-y-1/2 max-mdl:opacity-5 max-mdl:w-full mdl:w-3/5 mdl:mt-28 xl:mt-12 h-full">
-        <img
+        <Image
           src={why}
-          alt=""
+          alt="phone app"
           className="w-[80%] sml:w-[90%] xl:w-full h-auto"
         />
       </div>
