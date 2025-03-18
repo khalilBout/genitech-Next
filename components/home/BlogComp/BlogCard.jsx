@@ -3,6 +3,7 @@ import LocalizedLink from "@/components/Ui/LocalizedLink";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 const BlogCard = ({ item }) => {
   const t = useTranslations();
@@ -24,21 +25,21 @@ const BlogCard = ({ item }) => {
       </div>
 
       {/* info div  */}
-      <div className=" w-full p-2 font-Title my-auto flex flex-col justify-center items-center">
-        <h2 className="text-slate-200 p-1 text-[14px]  font-bold text-center">
+      <div className=" w-full p-2 font-Title my-auto flex flex-col justify-center items-center text-slate-200 text-center px-2">
+        <h2 className="text-slate-200 p-1 text-[16px]  font-bold text-center">
           {`${
             locale === "ar"
-              ? item?.title.slice(0, 60)
-              : item?.title_en.slice(0, 60)
+              ? item?.title.slice(0, 30)
+              : item?.title_en.slice(0, 30)
           }...`}
         </h2>
-        <p className=" px-3 text-center text-[12px] text-slate-200">
+        <ReactMarkdown>
           {`${
             locale === "ar"
-              ? item?.description.slice(0, 180)
-              : item?.description_en.slice(0, 180)
+              ? item?.description.slice(0, 100)
+              : item?.description_en.slice(0, 100)
           }...`}
-        </p>
+        </ReactMarkdown>
         <button className="my-2 px-4 py-1 bg-primary text-slate-200 font-bold cursor-pointer text-[14px]">
           {t("blogComp.btn")}
         </button>

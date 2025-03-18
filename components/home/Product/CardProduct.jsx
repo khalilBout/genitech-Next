@@ -3,6 +3,7 @@ import LocalizedLink from "@/components/Ui/LocalizedLink";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 const CardProduct = ({ item }) => {
   const t = useTranslations();
@@ -14,21 +15,21 @@ const CardProduct = ({ item }) => {
       className="m-4 flex h-[350px] max-w-[400px] bg-primary/30 rounded-md"
     >
       {/* info div  */}
-      <div className="w-1/2 h-full font-Title my-auto flex flex-col justify-center items-center">
-        <h2 className="text-slate-200 p-3text-[14px] mdl:text-[15px] font-bold text-center">
+      <div className="w-1/2 h-full font-Title my-auto flex flex-col justify-center items-center text-slate-200 text-center px-2">
+        <h2 className="py-2 text-emerald-300 p-3text-[16px] mdl:text-[18px] font-bold text-center">
           {`${
             locale === "ar"
-              ? item?.title.slice(0, 60)
-              : item?.title_en.slice(0, 60)
+              ? item?.title.slice(0, 30)
+              : item?.title_en.slice(0, 30)
           }...`}
         </h2>
-        <p className="py-2 px-3 text-center text-[13px] text-slate-200">
+        <ReactMarkdown>
           {`${
             locale === "ar"
-              ? item?.description.slice(0, 240)
-              : item?.description_en.slice(0, 240)
+              ? item?.description.slice(0, 120)
+              : item?.description_en.slice(0, 120)
           }...`}
-        </p>
+        </ReactMarkdown>
         <button className="px-4 py-1 bg-primary text-slate-200 font-bold cursor-pointer my-2 text-[14px]">
           {t("product.btn")}
         </button>
