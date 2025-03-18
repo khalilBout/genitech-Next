@@ -75,7 +75,9 @@ export async function middleware(req) {
     req.nextUrl.pathname.startsWith("/dashboard") &&
     (!token || token.role !== "admin")
   ) {
-    return NextResponse.redirect(new URL("/", req.url));
+    // السماح بالوصول لكافة الصفحات حتي يتم الوصول للخطا 
+    // return NextResponse.redirect(new URL("/", req.url));
+    return intlMiddleware(req);
   }
 
   // تمرير الطلب لباقي الصفحات
