@@ -13,7 +13,7 @@ import Summary from "@/components/home/Summary/Summary";
 import { getPortfolios } from "@/utilit/getData/getPortfolio";
 import { getProducts } from "@/utilit/getData/getProducts";
 import { getLastBlogs } from "@/utilit/getData/getBlogs";
-import { getServerSession } from "next-auth";
+// import { getServerSession } from "next-auth";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -25,8 +25,8 @@ const Home = async () => {
   const { allProducts } = await getProducts();
   const { AllBlogs } = await getLastBlogs();
 
-  const session = await getServerSession();
-  console.log("session form home:", session);
+  // const session = await getServerSession();
+  // console.log("session form home:", session);
   return (
     <div className=" overflow-hidden">
       <WhatsAppBtn />
