@@ -23,7 +23,7 @@ const pageMobileApp = async () => {
   // );
 
   return (
-    <div className=" ">
+    <div className=" overflow-hidden">
       <WhatsAppBtn />
       <Hero />
       <WhyUs />

@@ -22,7 +22,7 @@ const pageDesignApp = async () => {
   //   elm.category.includes("design")
   // );
   return (
-    <div className=" ">
+    <div className=" overflow-hidden">
       <WhatsAppBtn />
       <Hero />
       <WhyUs />

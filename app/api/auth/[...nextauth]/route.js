@@ -51,15 +51,14 @@ const handler = NextAuth({
     async jwt({ token, user }) {
       if (user) {
         token.role = user.role;
-        // return token;
+        return token;
       }
       return token;
     },
-
     //  إضافة دور المستخدم وصورته في جانب الكلاينت
     async session({ session, token }) {
       if (session?.user) {
-        session.user.role = token.role || "user";
+        session.user.role = token.role;
         return session;
       }
       return session;

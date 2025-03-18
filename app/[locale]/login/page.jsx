@@ -1,19 +1,13 @@
 import React from "react";
 import Login from "@/components/Login/Login";
-
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
 const page = async () => {
   const session = await getServerSession();
   if (session) {
-    console.log(
-      "ssechen /////////////////////////////////////////////",
-      session.user
-    );
-
     // التحقق مما إذا كان المستخدم أدمن أم لا
-    if (session.user.role === "admin") {
+    if (session) {
       redirect("/dashboard"); // توجيه الأدمن إلى لوحة التحكم
     } else {
       redirect("/"); // توجيه المستخدم العادي إلى الصفحة الرئيسية

@@ -22,7 +22,7 @@ const pageDeskApp = async () => {
   //   elm.category.includes("deskApp")
   // );
   return (
-    <div className=" ">
+    <div className=" overflow-hidden">
       <WhatsAppBtn />
       <Hero />
       <WhyUs />
