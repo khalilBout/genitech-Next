@@ -41,7 +41,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="screenPadding fixed z-50 top-0 left-0 right-0 bg-[#CEEBFD] h-[58px] mdl:h-[78px] flex justify-between items-center ">
+    <nav className="screenPadding fixed z-[100] top-0 left-0 right-0 bg-[#CEEBFD] h-[58px] mdl:h-[78px] flex justify-between items-center ">
       {/* logo sect  */}
       <Logo />
       <Links items={LinkData} />

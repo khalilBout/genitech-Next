@@ -10,7 +10,7 @@ const WhatsAppBtn = () => {
     <a
       dir="rtl"
       href="https://wa.me/963956495873"
-      className=" group fixed z-50 bottom-8 right-6 w-[120px] mdl:w-[160px] flex justify-center items-center gap-2 font-Title font-semibold"
+      className=" group fixed z-[100] bottom-8 right-6 w-[120px] mdl:w-[160px] flex justify-center items-center gap-2 font-Title font-semibold"
     >
       <Image
         src={wapp}

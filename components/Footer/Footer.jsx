@@ -130,7 +130,7 @@ const Footer = () => {
             </li>
             <li className="my-1 flex gap-2 items-center">
               <FaPhoneAlt className="text-primary " size={18} />
-              <a dir="" href="/" className="">
+              <a dir="ltr" href="/" className="">
                 {t("footer.contact.phone")}
               </a>
             </li>
