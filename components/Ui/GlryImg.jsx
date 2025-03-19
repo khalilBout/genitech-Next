@@ -12,7 +12,7 @@ const GlryImg = ({ elm }) => {
           src={mainImg}
           alt={elm.title_en}
           fill
-          className=" object-cover"
+          className=" object-contain"
         />
       </div>
       <div className=" flex justify-center items-center flex-wrap gap-2 m-2">

@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer utilities {
   .screenPadding {
     @apply px-[16px] sm:px-[32px] md:px-[64px]  xl:px-[140px];

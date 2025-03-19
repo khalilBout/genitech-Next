@@ -8,7 +8,7 @@ const Hero = () => {
   const t = useTranslations();
 
   return (
-    <section className="mt-20 mdl:h-screen flex justify-center items-center">
+    <section className="mt-20 xl:h-screen flex justify-center items-center">
       {/* info dev  */}
       <div className="mt-36 mdl:mt-28 mdl:w-2/5 font-Title h-full m-12">
         <motion.h1
@@ -63,13 +63,13 @@ const Hero = () => {
         >
           <a
             href="/#contact"
-            className="px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-slate-200 hover:bg-primary hover:text-black cursor-pointer duration-150 transition-all font-bold"
+            className="z-50 px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-slate-200 hover:bg-primary hover:text-black cursor-pointer duration-150 transition-all font-bold"
           >
             {t("hero.btn-1")}
           </a>
           <a
             href="/#services"
-            className="px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-black bg-primary hover:text-primary hover:bg-transparent cursor-pointer duration-150 transition-all font-bold"
+            className="z-50 px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-black bg-primary hover:text-primary hover:bg-transparent cursor-pointer duration-150 transition-all font-bold"
           >
             {t("hero.btn-2")}
           </a>

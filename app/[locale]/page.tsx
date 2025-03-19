@@ -28,7 +28,7 @@ const Home = async () => {
   // const session = await getServerSession();
   // console.log("session form home:", session);
   return (
-    <div className=" overflow-hidden">
+    <div className="overflow-hidden ">
       <WhatsAppBtn />
       <Hero />
       <Statistic />

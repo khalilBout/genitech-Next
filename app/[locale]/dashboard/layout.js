@@ -15,7 +15,7 @@ export default function dashboardLayout({ children }) {
               <li>
                 <LocalizedLink
                   href="/dashboard/product"
-                  className=" hover:scale-105 text-[14px] mdl:text-[16] font-bold text-blue-900 hover:text-white px-2 py-1 rounded-md hover:bg-primary transition-all duration-200"
+                  className="z-50 hover:scale-105 text-[14px] mdl:text-[16] font-bold text-blue-900 hover:text-white px-2 py-1 rounded-md hover:bg-primary transition-all duration-200"
                 >
                   المنتجات
                   {/* <span className="text-red-300">({cart.length})</span> */}
@@ -24,7 +24,7 @@ export default function dashboardLayout({ children }) {
               <li>
                 <LocalizedLink
                   href="/dashboard/portfolio"
-                  className=" hover:scale-105 text-[14px] mdl:text-[16] font-bold text-blue-900 hover:text-white px-2 py-1 rounded-md hover:bg-primary transition-all duration-200"
+                  className="z-50 hover:scale-105 text-[14px] mdl:text-[16] font-bold text-blue-900 hover:text-white px-2 py-1 rounded-md hover:bg-primary transition-all duration-200"
                 >
                   الأعمال
                   {/* <span className="text-red-300">({cart.length})</span> */}
@@ -33,7 +33,7 @@ export default function dashboardLayout({ children }) {
               <li>
                 <LocalizedLink
                   href="/dashboard/blog"
-                  className=" hover:scale-105 text-[14px] mdl:text-[16] font-bold text-blue-900 hover:text-white px-2 py-1 rounded-md hover:bg-primary transition-all duration-200"
+                  className="z-50 hover:scale-105 text-[14px] mdl:text-[16] font-bold text-blue-900 hover:text-white px-2 py-1 rounded-md hover:bg-primary transition-all duration-200"
                 >
                   المدونات
                   {/* <span className="text-red-300">({cart.length})</span> */}

@@ -7,7 +7,6 @@ import logoBg from "@/public/logoBg.webp";
 import BlogCard from "@/components/home/BlogComp/BlogCard";
 import Image from "next/image";
 
-
 const OneBlog = ({ item, AllBlogs }) => {
   const t = useTranslations();
   const locale = useLocale();
@@ -20,7 +19,7 @@ const OneBlog = ({ item, AllBlogs }) => {
           src={item?.mainImg}
           alt={item?.title_en}
           fill
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-contain"
         />
       </div>
       {/* info div  */}

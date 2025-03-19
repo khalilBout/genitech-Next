@@ -40,7 +40,7 @@ const BlogCard = ({ item }) => {
               : item?.description_en.slice(0, 100)
           }...`}
         </ReactMarkdown>
-        <button className="my-2 px-4 py-1 bg-primary text-slate-200 font-bold cursor-pointer text-[14px]">
+        <button className=" z-50 my-2 px-4 py-1 bg-primary text-slate-200 font-bold cursor-pointer text-[14px]">
           {t("blogComp.btn")}
         </button>
       </div>

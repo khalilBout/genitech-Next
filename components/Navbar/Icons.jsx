@@ -23,7 +23,6 @@ const Icons = () => {
   const t = useTranslations();
   const locale = useLocale();
   const [opneLeng, setOpneLeng] = useState(false);
-
   return (
     <div className=" flex justify-center items-center">
       {session && session.status === "authenticated" ? (

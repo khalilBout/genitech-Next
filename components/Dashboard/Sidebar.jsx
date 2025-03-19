@@ -14,7 +14,7 @@ const Sidebar = () => {
           <li>
             <LocalizedLink
               href="/dashboard/product"
-              className=" bg-slate-400 hover:scale-105 text-[16px] font-bold text-slate-900 hover:text-white px-4 py-1 rounded-md hover:bg-primary transition-all duration-200"
+              className="z-50 bg-slate-400 hover:scale-105 text-[16px] font-bold text-slate-900 hover:text-white px-4 py-1 rounded-md hover:bg-primary transition-all duration-200"
             >
               المنتجات
               {/* <span className="text-red-300">({cart.length})</span> */}
@@ -23,7 +23,7 @@ const Sidebar = () => {
           <li>
             <LocalizedLink
               href="/dashboard/portfolio"
-              className=" bg-slate-400 hover:scale-105 text-[16px] font-bold text-slate-900 hover:text-white px-4 py-1 rounded-md hover:bg-primary transition-all duration-200"
+              className="z-50 bg-slate-400 hover:scale-105 text-[16px] font-bold text-slate-900 hover:text-white px-4 py-1 rounded-md hover:bg-primary transition-all duration-200"
             >
               الأعمال
               {/* <span className="text-red-300">({cart.length})</span> */}
@@ -32,7 +32,7 @@ const Sidebar = () => {
           <li>
             <LocalizedLink
               href="/dashboard/blog"
-              className=" bg-slate-400 hover:scale-105 text-[16px] font-bold text-slate-900 hover:text-white px-4 py-1 rounded-md hover:bg-primary transition-all duration-200"
+              className="z-50 bg-slate-400 hover:scale-105 text-[16px] font-bold text-slate-900 hover:text-white px-4 py-1 rounded-md hover:bg-primary transition-all duration-200"
             >
               المدونات
               {/* <span className="text-red-300">({cart.length})</span> */}

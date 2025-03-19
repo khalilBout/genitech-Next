@@ -29,7 +29,7 @@ const CardProduct = ({ item }) => {
         </ReactMarkdown>
         <LocalizedLink
           href={`/product/${item._id}`}
-          className="px-4 py-1 bg-primary text-slate-200 font-bold cursor-pointer my-2 text-[14px]"
+          className="z-50 px-4 py-1 bg-primary text-slate-200 font-bold cursor-pointer my-2 text-[14px]"
         >
           {t("product.btn")}
         </LocalizedLink>

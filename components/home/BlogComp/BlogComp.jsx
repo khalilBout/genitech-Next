@@ -18,7 +18,7 @@ const BlogComp = ({ dataBlog }) => {
         </h1>
         <LocalizedLink
           href="/blog"
-          className="text-center text-[13px] mdl:text-[15px] bg-primary  py-1 min-w-[90px] h-[35px] rounded-md font-bold text-gray-950"
+          className="z-50 text-center text-[13px] mdl:text-[15px] bg-primary  py-1 min-w-[90px] h-[35px] rounded-md font-bold text-gray-950"
         >
           {t("blogComp.btn")}
         </LocalizedLink>

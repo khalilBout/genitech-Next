@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dataDir} suppressHydrationWarning>
       <body
-        className={`relative ${inter.className} bg-cover bg-center bg-no-repeat`}
+        className={` ${inter.className} bg-cover bg-center bg-no-repeat`}
         style={{ backgroundImage: `url(${bg.src})` }}
       >
         <AuthProvider>

@@ -18,7 +18,7 @@ const pagePortfolioAdmin = async () => {
             أعمالنا السابقة
           </h2>
           <LocalizedLink href="/dashboard/portfolio/addPortfolio">
-            <button className=" font-Title mx-2 text-sm font-medium py-2 px-4 rounded-md rounded-bl-md  bg-green-300 text-primeColor hover:text-lightText hover:bg-primeColor">
+            <button className="z-50 font-Title mx-2 text-sm font-medium py-2 px-4 rounded-md rounded-bl-md  bg-green-300 text-primeColor hover:text-lightText hover:bg-primeColor">
               إضافة عمل
             </button>
           </LocalizedLink>

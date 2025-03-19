@@ -66,17 +66,17 @@ const Summary = () => {
           delay: 0.4,
         }}
         dir="ltr"
-        className="flex justify-center items-center gap-4 mb-2"
+        className=" relative flex justify-center items-center gap-4 mb-2"
       >
         <button
           onClick={() => prevText()}
-          className="w-[30px] h-[30px] rounded-full border border-primary flex justify-center items-center"
+          className="z-50 w-[30px] h-[30px] rounded-full border border-primary flex justify-center items-center"
         >
           <IoIosArrowBack className="text-primary" size={20} />
         </button>
         <button
           onClick={() => nextText()}
-          className="w-[30px] h-[30px] rounded-full border border-primary flex justify-center items-center"
+          className="z-50 w-[30px] h-[30px] rounded-full border border-primary flex justify-center items-center"
         >
           <IoIosArrowForward className="text-primary" size={20} />
         </button>

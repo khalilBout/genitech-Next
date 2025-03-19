@@ -14,7 +14,7 @@ const LinkService = ({ setOpenLinkService }) => {
   return (
     <div className=" my-2 flex justify-center items-center">
       <ul className=" w-[80%] flex flex-col mdl:flex-row justify-center items-center gap-2 mdl:gap-6 font-Title text-slate-950 font-bold">
-        <li className="flex justify-center mdl:justify-between items-center min-w-[160px] px-3 py-1 rounded-md hover:scale-105 hover:bg-lime-300 hover:text-slate-100 transition-all duration-200">
+        <li className="flex justify-center mdl:justify-between items-center min-w-[160px] px-3 py-1 rounded-md hover:scale-105 hover:bg-primary hover:text-slate-100 transition-all duration-200">
           <Image
             src={mobile}
             alt=""
@@ -28,7 +28,7 @@ const LinkService = ({ setOpenLinkService }) => {
             {t("linkService.mobileapp")}
           </LocalizedLink>
         </li>
-        <li className="flex justify-center mdl:justify-between items-center min-w-[160px] px-3 py-1 rounded-md hover:scale-105 hover:bg-lime-300 hover:text-slate-100 transition-all duration-200">
+        <li className="flex justify-center mdl:justify-between items-center min-w-[160px] px-3 py-1 rounded-md hover:scale-105 hover:bg-primary hover:text-slate-100 transition-all duration-200">
           <Image
             src={desk}
             alt=""
@@ -42,7 +42,7 @@ const LinkService = ({ setOpenLinkService }) => {
             {t("linkService.deskapp")}
           </LocalizedLink>
         </li>
-        <li className="flex justify-center mdl:justify-between items-center min-w-[160px] px-3 py-1 rounded-md hover:scale-105 hover:bg-lime-300 hover:text-slate-100 transition-all duration-200">
+        <li className="flex justify-center mdl:justify-between items-center min-w-[160px] px-3 py-1 rounded-md hover:scale-105 hover:bg-primary hover:text-slate-100 transition-all duration-200">
           <Image
             src={web}
             alt=""
@@ -56,7 +56,7 @@ const LinkService = ({ setOpenLinkService }) => {
             {t("linkService.webapp")}
           </LocalizedLink>
         </li>
-        <li className="flex justify-center mdl:justify-between items-center min-w-[160px] px-3 py-1 rounded-md hover:scale-105 hover:bg-lime-300 hover:text-slate-100 transition-all duration-200">
+        <li className="flex justify-center mdl:justify-between items-center min-w-[160px] px-3 py-1 rounded-md hover:scale-105 hover:bg-primary hover:text-slate-100 transition-all duration-200">
           <Image
             src={design}
             alt=""

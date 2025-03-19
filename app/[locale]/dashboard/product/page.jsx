@@ -18,7 +18,7 @@ const pageProductAdmin = async () => {
             المنتجات الرقمية
           </h2>
           <LocalizedLink href="/dashboard/product/addProduct">
-            <button className=" font-Title mx-2 text-sm font-medium py-2 px-4 rounded-md rounded-bl-md  bg-green-300 text-primeColor hover:text-lightText hover:bg-primeColor">
+            <button className="z-50 font-Title mx-2 text-sm font-medium py-2 px-4 rounded-md rounded-bl-md  bg-green-300 text-primeColor hover:text-lightText hover:bg-primeColor">
               إضافة منتج
             </button>
           </LocalizedLink>
