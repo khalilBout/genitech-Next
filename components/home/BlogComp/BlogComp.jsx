@@ -24,7 +24,7 @@ const BlogComp = ({ dataBlog }) => {
         </LocalizedLink>
       </div>
       {/* image  */}
-      <div className="my-8 flex justify-center items-center flex-wrap gap-4">
+      <div className=" mt-8 flex flex-wrap justify-center items-center  gap-4">
         {dataBlog?.length > 0 ? (
           dataBlog?.map((item, ind) => <BlogCard key={ind} item={item} />)
         ) : (

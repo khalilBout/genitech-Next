@@ -45,9 +45,10 @@ const BlogCard = ({ item }) => {
     //     </button>
     //   </div>
     // </LocalizedLink>
+    // <div className="  bg-yellow-300">
     <LocalizedLink
       href={`/blog/${item._id}`}
-      className="relative mx-auto w-[270px] h-[270px] md mdl:h-[320px] mdl:w-[320px]"
+      className="relative rounded-md w-[310px] h-[180px]"
     >
       {/* صورة الخلفية */}
       <div className="w-full h-full rounded-md bg-slate-300 overflow-hidden relative">
@@ -55,15 +56,15 @@ const BlogCard = ({ item }) => {
           src={item?.mainImg}
           alt={item?.title_en}
           fill
-          className="object-cover w-full h-full"
+          className=" rounded-md object-cover w-full h-full"
         />
       </div>
 
       {/* تدرج الخلفية */}
-      <div className=" w-full h-full bg-gradient-to-t from-black/90 via-black/70 to-black/0 absolute z-10 top-0 left-0"></div>
+      <div className="rounded-md w-full h-full bg-gradient-to-t from-black/90 via-black/70 to-black/0 absolute z-10 top-0 left-0"></div>
 
       {/* العنوان */}
-      <h1 className="mx-auto text-[14px] mdl:text-[16px] text-center font-Title my-1 text-primary h-[22%] px-2 w-full absolute z-20 bottom-0">
+      <h1 className="mx-auto text-[14px] mdl:text-[16px] text-center font-Title my-1 text-primary h-[27%] px-2 w-full absolute z-20 bottom-0">
         {locale === "ar"
           ? item?.title.length > 55
             ? `${item?.title.slice(0, 55)} ...`
@@ -73,6 +74,7 @@ const BlogCard = ({ item }) => {
           : item?.title_en}
       </h1>
     </LocalizedLink>
+    // </div>
   );
 };
 export default BlogCard;

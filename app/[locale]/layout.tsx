@@ -10,6 +10,7 @@ import bg from "@/public/bg.webp";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Script from "next/script";
 const inter = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -34,6 +35,21 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={dataDir} suppressHydrationWarning>
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-J5EGX66XJB"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J5EGX66XJB');
+  `}
+        </Script>
+      </head>
       <body
         className={` ${inter.className} bg-cover bg-center bg-no-repeat`}
         style={{ backgroundImage: `url(${bg.src})` }}

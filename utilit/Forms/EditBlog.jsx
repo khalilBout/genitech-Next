@@ -110,7 +110,7 @@ const EditBlog = ({ blogData }) => {
           </form>
 
           {/* image box  */}
-          <div className="flex justify-center items-center ">
+          {/* <div className="flex justify-center items-center ">
             {newImage ? (
               <div className="flex flex-col gap-2 justify-center items-center text-slate-200">
                 <h1 className="py-4 text-xl font-Title">صورة المدونة</h1>
@@ -125,6 +125,35 @@ const EditBlog = ({ blogData }) => {
                     className=" w-full h-full object-contain rounded-lg"
                   />
                   <div className="z-40 absolute top-4 -left-4 w-[22px] h-[22px] rounded-full bg-primary hover:bg-red-500 ">
+                    <button
+                      className="text-red-700 hover:text-slate-200"
+                      onClick={() => setNewImage("")}
+                    >
+                      <MdDeleteOutline size={22} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <UploadImg setMainImg={setNewImage} />
+            )}
+          </div> */}
+          {/* image box  */}
+          <div className="flex justify-center items-center ">
+            {newImage ? (
+              <div className="flex flex-col gap-2 justify-center items-center text-slate-200">
+                <h1 className="py-4 text-xl font-Title">صورة المدونة </h1>
+                <div className=" relative bg-slate-200 z-40">
+                  <Image
+                    src={newImage}
+                    alt="Main Blog Image"
+                    width={545}
+                    height={320}
+                    // fill
+                    quality={100}
+                    className=" w-full h-full object-contain rounded-lg"
+                  />
+                  <div className="z-40 absolute top-2 left-4 w-[22px] h-[22px] rounded-full bg-primary hover:bg-red-500 ">
                     <button
                       className="text-red-700 hover:text-slate-200"
                       onClick={() => setNewImage("")}

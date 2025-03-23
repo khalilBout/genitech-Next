@@ -48,41 +48,46 @@ const CardProfil = ({ item }) => {
     //     />
     //   </div>
     // </div>
-    <div className=" mx-auto w-[270px] h-[330px]">
-      {/* صورة الخلفية */}
-      <div className="w-[270px] h-[270px]  bg-slate-300 overflow-hidden relative">
-        <Image
-          src={item?.mainImg}
-          alt={item?.title_en}
-          fill
-          className="object-cover w-full h-full"
-        />
-      </div>
+    <div className="mx-auto w-[270px] h-[330px] rounded-md">
+      <LocalizedLink
+        href={`/profil/${item._id}`}
+        className=" w-[270px] h-[330px] rounded-md"
+      >
+        {/* صورة الخلفية */}
+        <div className=" rounded-t-md w-[270px] h-[270px]  bg-slate-300 overflow-hidden relative">
+          <Image
+            src={item?.mainImg}
+            alt={item?.title_en}
+            fill
+            className="object-cover w-full h-full rounded-t-md"
+          />
+        </div>
 
-      {/* تدرج الخلفية */}
-      {/* <div className="w-full h-full bg-gradient-to-t from-black/90 via-black/70 to-black/0 absolute z-10 top-0 left-0"></div> */}
-      <div className=" relative bg-sky-950  w-full h-[60px] mdl:h-[60px] ">
-        {/* العنوان */}
-        <h1 className="pt-1 text-[14px] mdl:text-[15px] text-center font-Title mx-2 text-primary h-[22%] px-2 w-full">
-          {locale === "ar"
-            ? item?.title.length > 55
-              ? `${item?.title.slice(0, 55)} ...`
-              : item?.title
-            : item?.title_en.length > 55
-            ? `${item?.title_en.slice(0, 55)} ...`
-            : item?.title_en}
-        </h1>
+        {/* تدرج الخلفية */}
+        {/* <div className="w-full h-full bg-gradient-to-t from-black/90 via-black/70 to-black/0 absolute z-10 top-0 left-0"></div> */}
+        <div className=" rounded-b-md bg-sky-950 w-full h-[60px]  flex justify-center items-center ">
+          {/* العنوان */}
+          <h1 className="text-[14px] mdl:text-[15px] text-center font-Title text-primary w-full">
+            {locale === "ar"
+              ? item?.title.length > 55
+                ? `${item?.title.slice(0, 55)} ...`
+                : item?.title
+              : item?.title_en.length > 55
+              ? `${item?.title_en.slice(0, 55)} ...`
+              : item?.title_en}
+          </h1>
 
-        {/* رابط المنتج */}
-        <LocalizedLink
+          {/* رابط المنتج */}
+          {/* <LocalizedLink
           href={`/profil/${item._id}`}
           className={`rounded-full absolute bottom-1 ${
             locale === "ar" ? "left-2" : "right-2"
           } z-50 px-2 py-[2px] bg-primary/80 text-slate-200 font-Title font-bold cursor-pointer my-1 text-[13px]`}
         >
           {t("product.btn")}
-        </LocalizedLink>
-      </div>
+        </LocalizedLink> */}
+        </div>
+      </LocalizedLink>
     </div>
   );
 };

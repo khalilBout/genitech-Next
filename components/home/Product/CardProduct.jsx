@@ -60,7 +60,7 @@ const CardProduct = ({ item }) => {
       <div className="w-full h-full bg-gradient-to-t from-black/90 via-black/70 to-black/0 absolute z-10 top-0 left-0"></div>
 
       {/* العنوان */}
-      <h1 className="text-[14px] mdl:text-[16px] text-center font-Title mx-2 my-1 text-primary h-[22%] px-2 w-full absolute z-20 bottom-0">
+      <h1 className=" text-[14px] font-medium mdl:text-[16px] text-center font-Title mx-2 my-1 text-primary h-[22%] px-2 w-full absolute z-20 bottom-0">
         {locale === "ar"
           ? item?.title.length > 55
             ? `${item?.title.slice(0, 55)} ...`
@@ -73,12 +73,8 @@ const CardProduct = ({ item }) => {
       {/* رابط المنتج */}
       <LocalizedLink
         href={`/product/${item._id}`}
-        className={`rounded-full absolute bottom-2 ${
-          locale === "ar" ? "left-2" : "right-2"
-        } z-50 px-2 py-[2px] bg-primary/80 text-slate-200 font-Title font-bold cursor-pointer my-1 text-[13px]`}
-      >
-        {t("product.btn")}
-      </LocalizedLink>
+        className="w-full h-full absolute top-0 left-0 z-50 cursor-pointer "
+      ></LocalizedLink>
     </div>
   );
 };

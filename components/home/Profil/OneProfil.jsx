@@ -35,7 +35,7 @@ const OneProfil = ({ item, allPortfolios }) => {
           {locale === "ar" ? item.title : item.title_en}
         </h1>
 
-        <h1 className="text-lime-400 text-xl mdl:text-2xl xl:text-3xl py-4 mdl:py-8">
+        <h1 className="text-primary text-xl mdl:text-2xl xl:text-3xl py-4 mdl:py-8">
           {t("product.detail")}
         </h1>
 
@@ -53,7 +53,7 @@ const OneProfil = ({ item, allPortfolios }) => {
 
       <div className="w-full h-[1px] bg-primary mt-8 mdl:mt-12"></div>
 
-      <h1 className="text-lime-400 text-xl mdl:text-2xl xl:text-3xl py-4 mdl:py-8">
+      <h1 className="text-primary text-xl mdl:text-2xl xl:text-3xl py-4 mdl:py-8">
         {t("product.ourWork")}
       </h1>
       <div className="flex flex-wrap justify-center items-center gap-2 my-4">
