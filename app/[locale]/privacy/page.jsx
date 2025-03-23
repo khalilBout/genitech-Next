@@ -4,7 +4,7 @@ import Image from "next/image";
 import logoBg from "@/public/logoBg.webp";
 import policy from "@/public/policy.png";
 
-const page = ({ item, AllBlogs }) => {
+const page = () => {
   const t = useTranslations();
   const locale = useLocale();
 
