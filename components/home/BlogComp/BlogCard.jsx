@@ -46,7 +46,7 @@ const BlogCard = ({ item }) => {
     //   </div>
     // </LocalizedLink>
     <LocalizedLink
-      href={`/product/${item._id}`}
+      href={`/blog/${item._id}`}
       className="relative mx-auto w-[270px] h-[270px] md mdl:h-[320px] mdl:w-[320px]"
     >
       {/* صورة الخلفية */}
@@ -63,7 +63,7 @@ const BlogCard = ({ item }) => {
       <div className=" w-full h-full bg-gradient-to-t from-black/90 via-black/70 to-black/0 absolute z-10 top-0 left-0"></div>
 
       {/* العنوان */}
-      <h1 className="mx-auto text-[14px] mdl:text-[16px] text-center font-Title mx-2 my-1 text-primary h-[22%] px-2 w-full absolute z-20 bottom-0">
+      <h1 className="mx-auto text-[14px] mdl:text-[16px] text-center font-Title my-1 text-primary h-[22%] px-2 w-full absolute z-20 bottom-0">
         {locale === "ar"
           ? item?.title.length > 55
             ? `${item?.title.slice(0, 55)} ...`

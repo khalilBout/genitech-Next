@@ -109,7 +109,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="my-1">
-                <LocalizedLink href="/" className="z-50">
+                <LocalizedLink href="/privacy" className="z-50">
                   {t("footer.links.link-5")}
                 </LocalizedLink>
               </li>

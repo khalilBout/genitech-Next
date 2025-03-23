@@ -327,5 +327,37 @@
     "desc": "Welcome to our blog, where we keep up with the latest advancements in technology, design, and development! We provide you with rich content, insights, and tips to help you enhance your digital presence and make the most of modern tech solutions. Follow us to stay ahead!",
     "title2": "All Blogs",
     "titleInTheBlog": "What to read next"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "desc": "At Geni Tech, we respect your privacy and are committed to protecting your personal data. This policy aims to explain how we collect, use, and safeguard your information when using our services.",
+    "part-1": {
+      "title": "Information We Collect",
+      "desc": "We collect personal information such as your name, email address, and phone number when you register or communicate with us. Additionally, we gather technical information like your IP address, browser type, pages you visit, and the duration of your visit. If you use our desktop applications, we may also collect data about how you use the application to enhance performance and user experience."
+    },
+    "part-2": {
+      "title": "How We Use the Information",
+      "desc": "We use the data we collect to improve our services, provide a unique user experience, and communicate with you about updates and special offers. We also use it to analyze the performance of our services and understand how they are used for continuous improvement."
+    },
+    "part-3": {
+      "title": "Data Protection",
+      "desc": "We are committed to protecting your personal data through advanced security technologies and preventing unauthorized access. Data is encrypted during transmission according to the highest global security standards to ensure your privacy is maintained."
+    },
+    "part-4": {
+      "title": "Information Sharing",
+      "desc": "We do not sell or rent your personal data to any third parties. We may share your data with trusted parties for analytical purposes or to improve our services, ensuring your privacy is protected according to legal standards."
+    },
+    "part-5": {
+      "title": "Your Rights",
+      "desc": "You have the right to request modification or deletion of your personal data at any time. You may also object to the processing of your data for marketing purposes."
+    },
+    "part-6": {
+      "title": "Policy Updates",
+      "desc": "This privacy policy may be updated from time to time to reflect legal changes or improve our services. We will notify you of any significant updates via email or a notice on our website."
+    },
+    "part-7": {
+      "title": "Contact Us",
+      "desc": "If you have any questions or requests regarding the privacy policy, please contact us via email at [email@example.com] or by phone at +123456789."
+    }
   }
 }

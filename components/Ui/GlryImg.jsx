@@ -6,8 +6,8 @@ const GlryImg = ({ elm }) => {
   const [mainImg, setMainImg] = useState(elm?.mainImg);
 
   return (
-    <div className="w-full flex flex-col gap-4 justify-center items-center">
-      <div className=" w-[90%] min-h-[420px] relative flex justify-center items-center">
+    <div className="w-full flex flex-col mdl:flex-row gap-4 justify-center items-center">
+      <div className="bg-slate-200  h-[300px] md:h-[340px] mdl:h-[380px] xl:h-[420px] w-[300px] md:w-[340px] mdl:w-[380px] xl:w-[420px] relative flex justify-center items-center">
         <Image
           src={mainImg}
           alt={elm.title_en}
@@ -15,7 +15,7 @@ const GlryImg = ({ elm }) => {
           className=" object-contain"
         />
       </div>
-      <div className=" flex justify-center items-center flex-wrap gap-2 m-2">
+      <div className=" flex mdl:flex-col justify-center items-center flex-wrap gap-2 m-2">
         <div className=" relative w-[80px] h-[80px] mdl:w-[120px] mdl:h-[120px] ">
           <Image
             src={elm.mainImg}

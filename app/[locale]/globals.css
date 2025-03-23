@@ -36,3 +36,6 @@ body {
   overflow: auto !important;
   user-select: none;
 }
+option:focus {
+  outline: none;
+}

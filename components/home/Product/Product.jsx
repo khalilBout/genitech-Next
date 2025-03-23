@@ -14,7 +14,6 @@ const Product = ({ allProducts }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    swipe: false, // تعطيل خاصية السحب مؤقتًا
     responsive: [
       {
         breakpoint: 1440,
@@ -54,7 +53,7 @@ const Product = ({ allProducts }) => {
       <p className="text-slate-200 font-Title text-[14px] mdl:text-[15]">
         {t("product.desc")}
       </p>
-      <div className="w-full md:w-[95%] lg:w-[90%] xl:w-full h-auto mx-auto my-4">
+      <div className="w-[90%] lg:w-[90%] xl:w-full h-auto mx-auto my-4">
         {allProducts?.length > 0 ? (
           <Slider {...settings}>
             {allProducts?.map((item, ind) => (
