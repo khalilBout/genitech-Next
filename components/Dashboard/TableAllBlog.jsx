@@ -1,16 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import DeleteBlog from "./DeleteBlog";
+import { BiEdit } from "react-icons/bi";
+import LocalizedLink from "@/components/Ui/LocalizedLink";
+
 // import NoImg from "@/public/image/noImgeBook.webp";
 
 const TableAllBlog = ({ data }) => {
   return (
     <>
-      <table
-        className="w-full"
-        data-tab-for="product"
-        data-page="active"
-      >
+      <table className="w-full" data-tab-for="product" data-page="active">
         <thead>
           <tr>
             <th className="max-w-[120px] text-[15px] font-Title px-2 text-right font-bold text-slate-200 p-2">
@@ -18,6 +17,9 @@ const TableAllBlog = ({ data }) => {
             </th>
             <th className="text-[15px] font-Title text-center font-bold text-slate-200 p-2">
               العنوان
+            </th>
+            <th className="text-[15px] font-Title text-center font-bold text-slate-200 p-2">
+              تعديل
             </th>
             <th className="text-[15px] font-Title text-center font-bold text-slate-200 p-2">
               حدف
@@ -64,7 +66,14 @@ function Tr({ item }) {
         </td>
 
         {/* Actions  */}
-
+        <td className="text-[13px] text-center py-1 px-4 border-b border-b-gray-50">
+          <LocalizedLink
+            href={`/dashboard/blog/UpdatBlog/${_id}`}
+            className="cursor-pointer"
+          >
+            <BiEdit size={20} color={"rgb(34,197,94)"}></BiEdit>
+          </LocalizedLink>
+        </td>
         <td className="text-[13px] text-center py-1 px-4 border-b border-b-gray-50">
           <DeleteBlog id={_id} />
         </td>

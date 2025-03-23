@@ -91,6 +91,7 @@ const Hero = () => {
         <Image
           src={heroImg}
           alt="hero image"
+          quality={100}
           className="w-full h-auto opacity-15 mdl:opacity-100"
         />
       </motion.div>

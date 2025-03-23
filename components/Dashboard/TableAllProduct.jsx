@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import DeleteProduct from "./DeleteProduct";
 // import NoImg from "@/public/image/noImgeBook.webp";
+import { BiEdit } from "react-icons/bi";
+import LocalizedLink from "@/components/Ui/LocalizedLink";
 
 const TableAllProduct = ({ data }) => {
   // console.log("data:", data);
@@ -16,6 +18,9 @@ const TableAllProduct = ({ data }) => {
             </th>
             <th className="text-[15px] font-Title text-right font-bold text-slate-200 p-2">
               العنوان
+            </th>
+            <th className="text-[15px] font-Title text-center font-bold text-slate-200 p-2">
+              تعديل
             </th>
             <th className="text-[15px] font-Title text-center font-bold text-slate-200 p-2">
               حدف
@@ -62,7 +67,14 @@ function Tr({ item }) {
         </td>
 
         {/* Actions  */}
-
+        <td className="text-[13px] text-center py-1 px-4 border-b border-b-gray-50">
+          <LocalizedLink
+            href={`/dashboard/product/UpdatProduct/${_id}`}
+            className="cursor-pointer"
+          >
+            <BiEdit size={20} color={"rgb(34,197,94)"}></BiEdit>
+          </LocalizedLink>
+        </td>
         <td className="text-[13px] text-center py-1 px-4 border-b border-b-gray-50">
           <DeleteProduct id={_id} />
         </td>

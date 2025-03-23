@@ -18,7 +18,7 @@ const Profil = ({ allPortfolios }) => {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1140,
+        breakpoint: 1640,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -27,7 +27,7 @@ const Profil = ({ allPortfolios }) => {
         },
       },
       {
-        breakpoint: 960,
+        breakpoint: 1360,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -36,7 +36,7 @@ const Profil = ({ allPortfolios }) => {
         },
       },
       {
-        breakpoint: 660,
+        breakpoint: 860,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

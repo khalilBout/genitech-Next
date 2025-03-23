@@ -124,21 +124,19 @@ const Footer = () => {
           <ul className="text-[14px] ">
             <li className="my-1 flex gap-2 items-start">
               <FaLocationDot className="text-primary" size={18} />
-              <a href="/" className="">
+              <h2 href="/" className="select-text">
                 {t("footer.contact.add")}
-              </a>
+              </h2>
             </li>
             <li className="my-1 flex gap-2 items-center">
               <FaPhoneAlt className="text-primary " size={18} />
-              <a dir="ltr" href="/" className="">
+              <h2 dir="ltr" className="select-text">
                 {t("footer.contact.phone")}
-              </a>
+              </h2>
             </li>
             <li className="my-1 flex gap-2 items-center">
               <MdMarkEmailRead className="text-primary " size={18} />
-              <a href="/" className="">
-                {t("footer.contact.email")}
-              </a>
+              <h2 className="select-text">{t("footer.contact.email")}</h2>
             </li>
           </ul>
         </div>

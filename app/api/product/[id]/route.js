@@ -27,3 +27,32 @@ export const DELETE = async (request, { params }) => {
     return new NextResponse("Database Error", { status: 500 });
   }
 };
+
+export const PUT = async (request, { params }) => {
+  const { id } = params;
+  const {
+    title,
+    title_en,
+    description,
+    description_en,
+    mainImg,
+    category,
+    listImage,
+  } = await request.json();
+
+  try {
+    await connectDB();
+    await Product.findByIdAndUpdate(id, {
+      title: title,
+      title_en: title_en,
+      description: description,
+      description_en: description_en,
+      mainImg: mainImg,
+      category: category,
+      listImage: listImage,
+    });
+    return new NextResponse("Product updated", { status: 200 });
+  } catch (err) {
+    return new NextResponse("Database Error", { status: 500 });
+  }
+};

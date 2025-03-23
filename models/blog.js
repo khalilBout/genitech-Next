@@ -21,7 +21,7 @@ const BlogSchema = new mongoose.Schema({
     type: String,
     required: [true],
   },
-  listImage: [{ type: String, required: [false] }],
+  // listImage: [{ type: String, required: [false] }],
   createdAt: {
     type: Date,
     default: Date.now,
