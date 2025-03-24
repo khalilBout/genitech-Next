@@ -13,7 +13,7 @@ const Links = ({ items }) => {
         </li>
 
         <li className="">
-          <a href={items[1].link}>{items[1].name}</a>
+          <LocalizedLink href={items[1].link}>{items[1].name}</LocalizedLink>
         </li>
 
         <li className="">

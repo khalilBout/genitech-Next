@@ -21,7 +21,7 @@ const Navbar = () => {
     {
       id: 2,
       name: t("link.about"),
-      link: "/",
+      link: "/#aboutUs",
     },
     {
       id: 3,

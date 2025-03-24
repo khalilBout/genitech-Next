@@ -9,7 +9,10 @@ const About = () => {
   const t = useTranslations();
 
   return (
-    <div className="screenPadding relative flex justify-center items-center ">
+    <div
+      id="aboutUs"
+      className="screenPadding relative flex justify-center items-center "
+    >
       {/* info  */}
       <div className=" w-full mdl:w-1/2 font-Title">
         <motion.h1
