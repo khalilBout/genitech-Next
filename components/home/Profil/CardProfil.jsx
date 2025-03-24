@@ -48,13 +48,13 @@ const CardProfil = ({ item }) => {
     //     />
     //   </div>
     // </div>
-    <div className="mx-auto w-[270px] h-[330px] rounded-md">
+    <div className="mx-auto w-[260px] h-[320px] rounded-md">
       <LocalizedLink
         href={`/profil/${item._id}`}
-        className=" w-[270px] h-[330px] rounded-md"
+        className=" w-[260px] h-[320px] rounded-md"
       >
         {/* صورة الخلفية */}
-        <div className=" rounded-t-md w-[270px] h-[270px]  bg-slate-300 overflow-hidden relative">
+        <div className=" rounded-t-md w-[260px] h-[260px]  bg-slate-300 overflow-hidden relative">
           <Image
             src={item?.mainImg}
             alt={item?.title_en}

@@ -41,7 +41,7 @@ const FormContact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className=" flex items-center justify-center"
+        className="z-40 flex items-center justify-center"
       >
         <div className="px-2 py-4 flex flex-col justify-start ">
           <div className="flex flex-col gap-3">

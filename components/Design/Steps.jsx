@@ -25,7 +25,10 @@ const Steps = () => {
     },
   ];
   return (
-    <section className="screenPadding relative flex flex-col justify-center items-center max-mdl:my-4 ">
+    <section
+      id="StepsDesign"
+      className="screenPadding relative flex flex-col justify-center items-center max-mdl:my-4 "
+    >
       {/* info dev  */}
       <div className=" mdl:w-[90%] font-Title  mx-4 flex flex-col justify-center items-center ">
         <h1 className="text-center text-slate-200 text-xl sm:text-2xl xl:text-4xl ">

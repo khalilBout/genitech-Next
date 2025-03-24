@@ -56,7 +56,7 @@ const Profil = ({ allPortfolios }) => {
         {t("profil.title2")}
       </h1>
       <div className="w-full flex justify-between items-center gap-4 ">
-        <div className=" w-[90%] mdl:w-[80%]  lg:w-[70%] mx-auto my-4 ">
+        <div className=" w-[90%] mdl:w-[85%]  lg:w-[75%] mx-auto my-4 ">
           {allPortfolios?.length > 0 ? (
             <Slider {...settings}>
               {allPortfolios?.map((item, ind) => (
@@ -68,7 +68,7 @@ const Profil = ({ allPortfolios }) => {
           )}
         </div>
         {/* image div  */}
-        <div className=" hidden lg:flex justify-center items-center lg:w-[30%] h-full">
+        <div className=" hidden lg:flex justify-center items-center lg:w-[25%] h-full">
           {/* <img className="w-[100%] h-auto" src={imgProfil} alt="imgProfil" /> */}
           <ImageSlider />
         </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getPortfolios } from "@/utilit/getData/getPortfolio";
-import TableAllPortfolio from "@/components/Dashboard/TableAllProduct";
+import TableAllPortfolio from "@/components/Dashboard/TableAllPortfolio";
 // import Pagination from "@/app/components/dashboardPage/Pagination";
 import EmptyView from "@/components/Ui/EmptyView";
 import LocalizedLink from "@/components/Ui/LocalizedLink";

@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import heroPhon from "@/public/PhoneApp/phonApp.webp";
 import Image from "next/image";
+import LocalizedLink from "../Ui/LocalizedLink";
 
 const Hero = () => {
   const t = useTranslations();
@@ -20,12 +21,18 @@ const Hero = () => {
           {t("phoneApp.hero.desc")}
         </h3>
         <div className="mt-6 mdl:mt-12 flex justify-end gap-4">
-          <button className="px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-slate-200 hover:bg-primary hover:text-black cursor-pointer duration-150 transition-all font-bold">
+          <LocalizedLink
+            href="/mobileapp/#StepsPhon"
+            className="z-50 px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-slate-200 hover:bg-primary hover:text-black cursor-pointer duration-150 transition-all font-bold"
+          >
             {t("phoneApp.hero.btn-1")}
-          </button>
-          <button className="px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-black bg-primary hover:text-primary hover:bg-transparent cursor-pointer duration-150 transition-all font-bold">
+          </LocalizedLink>
+          <a
+            href="https://wa.me/963956495873"
+            className="z-50 px-2 py-1 md:px-4 md:py-2 text-[12px] md:text-[14] border border-primary text-black bg-primary hover:text-primary hover:bg-transparent cursor-pointer duration-150 transition-all font-bold"
+          >
             {t("phoneApp.hero.btn-2")}
-          </button>
+          </a>
         </div>
       </div>
 
