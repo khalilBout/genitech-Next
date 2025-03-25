@@ -99,14 +99,15 @@
     "desc": "Discover our exclusive range of digital products designed to facilitate your business and enhance your digital presence. Integrated solutions of the highest quality standards, ready to use immediately!",
     "btn": "More",
     "detail": "Product Details",
-    "ourWork": "From our work "
+    "ourWork": "From our Product "
   },
   "profil": {
     "title": "Discover how",
     "span": "Genitech",
     "title2": "helped its clients achieve their digital goals through innovative solutions.",
     "titlePageId": "From our previous work",
-    "btn": "Read More"
+    "btn": "Read More",
+    "ourWork": "From our work "
   },
   "blogComp": {
     "title": "Our Blog",

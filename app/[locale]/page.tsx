@@ -34,8 +34,8 @@ const Home = async () => {
       <Statistic />
       <Services />
       <About />
-      <Product allProducts={allProducts} />
       <Profil allPortfolios={allPortfolios} />
+      <Product allProducts={allProducts} />
       <Comment />
       <BlogComp dataBlog={AllBlogs} />
       <Contact />

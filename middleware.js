@@ -47,7 +47,7 @@ export async function middleware(req) {
   // جلب التوكن من الجلسة
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
 
-  console.log("Token from middleware:", token);
+  // console.log("Token from middleware:", token);
 
   const isDashboardRoute = req.nextUrl.pathname.match(/^\/(ar|en)?\/dashboard/);
 

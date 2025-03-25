@@ -28,8 +28,8 @@ const pageDeskApp = async () => {
       <WhyUs />
       <Features />
       <Steps />
-      <Product allProducts={allProducts} />
       <Profil allPortfolios={allPortfolios} />
+      <Product allProducts={allProducts} />
       <BlogComp dataBlog={AllBlogs} />
       <ContactPage />
     </div>
