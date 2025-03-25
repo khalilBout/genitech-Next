@@ -40,7 +40,7 @@ import createMiddleware from "next-intl/middleware";
 // إعدادات التعدد اللغوي
 const intlMiddleware = createMiddleware({
   locales: ["en", "ar"],
-  defaultLocale: "en",
+  defaultLocale: "ar",
 });
 
 export async function middleware(req) {
