@@ -36,7 +36,7 @@ const OneProfil = ({ item, allPortfolios }) => {
         </h1>
 
         <h1 className="text-primary text-xl mdl:text-2xl xl:text-3xl py-4 mdl:py-8">
-          {t("product.detail")}
+          {t("profil.detail")}
         </h1>
 
         <div className="min-h-[660px] relative text-slate-200">
