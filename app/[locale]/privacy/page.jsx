@@ -44,7 +44,7 @@ const page = () => {
           <Image
             src={policy}
             alt="policy"
-            className="w-full max-w-[380px] h-auto"
+            className="w-full max-w-[380px] h-auto object-contain"
           />
         </div>
       </section>
