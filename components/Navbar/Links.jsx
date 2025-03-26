@@ -22,7 +22,10 @@ const Links = ({ items }) => {
             onClick={() => setOpenLinkService(!openLinkService)}
           > */}
           {items[2].name}
-          <div className="hidden group-hover:block absolute top-[40px] w-[120vw] left-1/2 transform -translate-x-1/2 bg-[#CEEBFD]">
+          <div
+            // className="hidden group-hover:block absolute top-[40px] w-[120vw] left-1/2 transform -translate-x-1/2 bg-[#CEEBFD]"
+            className=" hidden group-hover:block absolute top-[40px] w-[120vw] left-1/2 transform -translate-x-1/2 bg-[#CEEBFD] transition-all duration-300 delay-200 group-hover:delay-100"
+          >
             <LinkService setOpenLinkService={setOpenLinkService} />
           </div>
           {/* </button> */}
