@@ -13,6 +13,13 @@ import { getPortfolios } from "@/utilit/getData/getPortfolio";
 import { getProducts } from "@/utilit/getData/getProducts";
 import { getLastBlogs } from "@/utilit/getData/getBlogs";
 
+export async function generateMetadata({ params }) {
+  return {
+    title: "Phone App | تطبيقات الهاتف",
+    description: "...",
+  };
+}
+
 const pageMobileApp = async () => {
   const { allPortfolios } = await getPortfolios();
   const { allProducts } = await getProducts();

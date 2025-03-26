@@ -5,11 +5,11 @@ import { getPortfolioById } from "@/utilit/getData/getPortfolio";
 import { getLastPortfolios } from "@/utilit/getData/getPortfolio";
 
 export async function generateMetadata({ params }) {
-  const DetailsData = await getPortfolioById(params.id);
+  const { portfolioData } = await getPortfolioById(params.id);
 
   return {
-    title: DetailsData.title_en,
-    description: DetailsData.description_en,
+    title: portfolioData.title_en,
+    description: portfolioData.description_en,
   };
 }
 const page = async ({ params }) => {

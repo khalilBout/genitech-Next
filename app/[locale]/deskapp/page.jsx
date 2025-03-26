@@ -13,6 +13,13 @@ import { getPortfolios } from "@/utilit/getData/getPortfolio";
 import { getProducts } from "@/utilit/getData/getProducts";
 import { getLastBlogs } from "@/utilit/getData/getBlogs";
 
+export async function generateMetadata({ params }) {
+  return {
+    title: "Desktop App | تطبيقات سطح المكتب",
+    description: "Desktop App",
+  };
+}
+
 const pageDeskApp = async () => {
   const { allPortfolios } = await getPortfolios();
   const { allProducts } = await getProducts();

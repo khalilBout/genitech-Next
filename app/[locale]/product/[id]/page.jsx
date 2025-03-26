@@ -3,14 +3,12 @@ import OneProduct from "@/components/home/Product/OneProduct";
 import { getProductById } from "@/utilit/getData/getProducts";
 import { getLastProducts } from "@/utilit/getData/getProducts";
 
-
-
 export async function generateMetadata({ params }) {
-  const DetailsData = await getProductById(params.id);
+  const { productData } = await getProductById(params.id);
 
   return {
-    title: DetailsData.title_en,
-    description: DetailsData.description_en,
+    title: productData.title_en,
+    description: productData.description_en,
   };
 }
 

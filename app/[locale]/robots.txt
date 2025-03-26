@@ -1,0 +1,2 @@
+User-agent: ia_archiver
+Sitemap: https://www.genitech.dev/ar/sitemap.xml

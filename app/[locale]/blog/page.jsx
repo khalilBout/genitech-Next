@@ -1,6 +1,13 @@
 import Blog from "@/components/Blog/Blog";
 import { getBlogs } from "@/utilit/getData/getBlogs";
 
+export async function generateMetadata({ params }) {
+  return {
+    title: "Blogs | المدونة",
+    description: "Desktop App",
+  };
+}
+
 // const dataBlog = [
 //   {
 //     id: 1,
