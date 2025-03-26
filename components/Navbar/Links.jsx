@@ -16,13 +16,16 @@ const Links = ({ items }) => {
           <LocalizedLink href={items[1].link}>{items[1].name}</LocalizedLink>
         </li>
 
-        <li className="">
-          <button
+        <li className=" relative group">
+          {/* <button
             className=""
             onClick={() => setOpenLinkService(!openLinkService)}
-          >
-            {items[2].name}
-          </button>
+          > */}
+          {items[2].name}
+          <div className="hidden group-hover:block absolute top-[40px] w-[120vw] left-1/2 transform -translate-x-1/2 bg-[#CEEBFD]">
+            <LinkService setOpenLinkService={setOpenLinkService} />
+          </div>
+          {/* </button> */}
         </li>
 
         <li className="">
@@ -33,11 +36,11 @@ const Links = ({ items }) => {
         </li>
       </ul>
 
-      {openLinkService && (
+      {/* {openLinkService && (
         <div className=" absolute top-[80px] w-screen left-1/2 transform -translate-x-1/2 bg-[#CEEBFD]">
           <LinkService setOpenLinkService={setOpenLinkService} />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
