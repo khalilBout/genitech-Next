@@ -52,7 +52,7 @@ const EditPortfili = ({ portfolioData }) => {
   };
   // Sending Update Data
   const sendUpdateData = async () => {
-    console.log("data protffoiol apdate : ", dataUpdated);
+    // console.log("data protffoiol apdate : ", dataUpdated);
     try {
       setLaudingSend(true);
       const res = await fetch(`/api/portfolio/${id}`, {

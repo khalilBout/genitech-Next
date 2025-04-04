@@ -1,7 +1,7 @@
 import React from "react";
 import { CldUploadButton } from "next-cloudinary";
 
-const UploadListImage = ({ setListImage }) => {
+const UploadListImage = ({ setListImage, listImage }) => {
   const handelUpload = (result) => {
     const info = result.info;
     // console.log("info list img", info);
@@ -22,6 +22,7 @@ const UploadListImage = ({ setListImage }) => {
       // setPublicId((prev) => [...prev, public_id]);
     }
   };
+  // console.log("listImage from uplod :", listImage);
   return (
     <div className="px-4 rounded-lg bg-primary">
       <CldUploadButton

@@ -32,7 +32,7 @@ const Page = () => {
     mainImg,
     listImage,
   };
-
+  // console.log("list Image from add product :", listImage);
   const addProduct = async () => {
     // console.log("data sending:", dataProduct);
     try {

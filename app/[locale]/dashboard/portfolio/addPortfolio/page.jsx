@@ -95,6 +95,7 @@ const Page = () => {
                   />
                 </div>
               ) : (
+                // <UploadImg setMainImg={setMainImg} />
                 <UploadImg setMainImg={setMainImg} />
               )}
             </div>
