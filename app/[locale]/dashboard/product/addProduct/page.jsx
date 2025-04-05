@@ -128,6 +128,11 @@ const Page = () => {
                     </div>
                   </div>
                 )}
+                {/* <UploadListImage
+                  listImage={listImage}
+                  setListImage={setListImage}
+                /> */}
+
                 <UploadListImage
                   listImage={listImage}
                   setListImage={setListImage}

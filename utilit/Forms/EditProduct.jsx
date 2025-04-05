@@ -232,6 +232,10 @@ const EditProduct = ({ productData }) => {
                   </div>
                 </div>
               )}
+              {/* <UploadListImage
+                listImage={newListImage}
+                setListImage={setListNewImage}
+              /> */}
               <UploadListImage
                 listImage={newListImage}
                 setListImage={setListNewImage}
