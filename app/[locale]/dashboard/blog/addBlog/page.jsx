@@ -77,7 +77,11 @@ const Page = () => {
                   />
                 </div>
               ) : (
-                <UploadImg setMainImg={setMainImg} />
+                // <UploadImg setMainImg={setMainImg} />
+                <UploadImg
+                  onUpload={(url) => setMainImg(url)}
+                  buttonText="رفع الصورة الرئيسية"
+                />
               )}
             </div>
             {/* <div className="flex-1">

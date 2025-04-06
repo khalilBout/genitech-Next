@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import FormAddProduct from "@/utilit/Forms/FormAddProduct";
 import UploadImg from "@/utilit/UploadImg";
-import UploadListImage from "@/utilit/UploadListImage";
+// import UploadListImage from "@/utilit/UploadListImage";
 import { useRouter } from "next/navigation";
 import Loading from "@/utilit/Loading";
 import Image from "next/image";
@@ -59,6 +59,8 @@ const Page = () => {
   const handleDelete = (elm) => {
     setListImage((prevList) => prevList.filter((item) => item !== elm));
   };
+  // console.log("main image :", mainImg);
+  // console.log("list image :", listImage);
 
   return (
     <div className="w-full px-4 my-8 mdl:my-12 text-slate-200 overflow-y-auto">
@@ -94,7 +96,11 @@ const Page = () => {
                   />
                 </div>
               ) : (
-                <UploadImg setMainImg={setMainImg} />
+                // <UploadImg setMainImg={setMainImg} />
+                <UploadImg
+                  onUpload={(url) => setMainImg(url)}
+                  buttonText="رفع الصورة الرئيسية"
+                />
               )}
             </div>
             <div className="flex-1">
@@ -133,9 +139,21 @@ const Page = () => {
                   setListImage={setListImage}
                 /> */}
 
-                <UploadListImage
+                {/* <UploadListImage
                   listImage={listImage}
                   setListImage={setListImage}
+                /> */}
+
+                <UploadImg
+                  onUpload={(url) => {
+                    setListImage((prevList) => {
+                      if (!prevList.includes(url)) {
+                        return [...prevList, url];
+                      }
+                      return prevList;
+                    });
+                  }}
+                  buttonText="إضافة صورة جديدة"
                 />
               </div>
             </div>

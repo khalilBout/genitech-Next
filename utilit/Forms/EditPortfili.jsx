@@ -5,7 +5,7 @@ import Loading from "@/components/Ui/Loading";
 import { MdDeleteOutline } from "react-icons/md";
 import Image from "next/image";
 import UploadImg from "@/utilit/UploadImg";
-import UploadListImage from "@/utilit/UploadListImage";
+// import UploadListImage from "@/utilit/UploadListImage";
 
 const EditPortfili = ({ portfolioData }) => {
   const id = portfolioData?._id;
@@ -200,7 +200,11 @@ const EditPortfili = ({ portfolioData }) => {
                 </div>
               </div>
             ) : (
-              <UploadImg setMainImg={setNewImage} />
+              // <UploadImg setMainImg={setNewImage} />
+              <UploadImg
+                onUpload={(url) => setNewImage(url)}
+                buttonText="رفع الصورة الرئيسية"
+              />
             )}
           </div>
           <div className="flex-1">
@@ -234,9 +238,20 @@ const EditPortfili = ({ portfolioData }) => {
                   </div>
                 </div>
               )}
-              <UploadListImage
+              {/* <UploadListImage
                 listImage={newListImage}
                 setListImage={setListNewImage}
+              /> */}
+              <UploadImg
+                onUpload={(url) => {
+                  setListNewImage((prevList) => {
+                    if (!prevList.includes(url)) {
+                      return [...prevList, url];
+                    }
+                    return prevList;
+                  });
+                }}
+                buttonText="إضافة صورة جديدة"
               />
             </div>
           </div>

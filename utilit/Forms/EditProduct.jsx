@@ -5,7 +5,7 @@ import Loading from "@/components/Ui/Loading";
 import { MdDeleteOutline } from "react-icons/md";
 import Image from "next/image";
 import UploadImg from "@/utilit/UploadImg";
-import UploadListImage from "@/utilit/UploadListImage";
+// import UploadListImage from "@/utilit/UploadListImage";
 
 const EditProduct = ({ productData }) => {
   const id = productData?._id;
@@ -198,7 +198,11 @@ const EditProduct = ({ productData }) => {
                 </div>
               </div>
             ) : (
-              <UploadImg setMainImg={setNewImage} />
+              // <UploadImg setMainImg={setNewImage} />
+              <UploadImg
+                onUpload={(url) => setNewImage(url)}
+                buttonText="رفع الصورة الرئيسية"
+              />
             )}
           </div>
           <div className="flex-1">
@@ -236,9 +240,22 @@ const EditProduct = ({ productData }) => {
                 listImage={newListImage}
                 setListImage={setListNewImage}
               /> */}
-              <UploadListImage
+
+              {/* <UploadListImage
                 listImage={newListImage}
                 setListImage={setListNewImage}
+              /> */}
+
+              <UploadImg
+                onUpload={(url) => {
+                  setListNewImage((prevList) => {
+                    if (!prevList.includes(url)) {
+                      return [...prevList, url];
+                    }
+                    return prevList;
+                  });
+                }}
+                buttonText="إضافة صورة جديدة"
               />
             </div>
           </div>

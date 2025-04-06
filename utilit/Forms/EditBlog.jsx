@@ -33,7 +33,7 @@ const EditBlog = ({ blogData }) => {
 
   // Sending Update Data
   const sendUpdateData = async () => {
-    console.log("data blog apdate : ", dataUpdated);
+    // console.log("data blog apdate : ", dataUpdated);
     try {
       setLaudingSend(true);
       const res = await fetch(`/api/blog/${id}`, {
@@ -164,7 +164,11 @@ const EditBlog = ({ blogData }) => {
                 </div>
               </div>
             ) : (
-              <UploadImg setMainImg={setNewImage} />
+              // <UploadImg setMainImg={setNewImage} />
+              <UploadImg
+                onUpload={(url) => setNewImage(url)}
+                buttonText="رفع الصورة الرئيسية"
+              />
             )}
           </div>
 

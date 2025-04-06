@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import FormAddPortfolio from "@/utilit/Forms/FormAddPortfolio";
 import UploadImg from "@/utilit/UploadImg";
-import UploadListImage from "@/utilit/UploadListImage";
+// import UploadListImage from "@/utilit/UploadListImage";
 import { useRouter } from "next/navigation";
 import Loading from "@/utilit/Loading";
 import Image from "next/image";
@@ -96,7 +96,11 @@ const Page = () => {
                 </div>
               ) : (
                 // <UploadImg setMainImg={setMainImg} />
-                <UploadImg setMainImg={setMainImg} />
+                // <UploadImg setMainImg={setMainImg} />
+                <UploadImg
+                  onUpload={(url) => setMainImg(url)}
+                  buttonText="رفع الصورة الرئيسية"
+                />
               )}
             </div>
             <div className="flex-1">
@@ -130,9 +134,20 @@ const Page = () => {
                     </div>
                   </div>
                 )}
-                <UploadListImage
+                {/* <UploadListImage
                   listImage={listImage}
                   setListImage={setListImage}
+                /> */}
+                <UploadImg
+                  onUpload={(url) => {
+                    setListImage((prevList) => {
+                      if (!prevList.includes(url)) {
+                        return [...prevList, url];
+                      }
+                      return prevList;
+                    });
+                  }}
+                  buttonText="إضافة صورة جديدة"
                 />
               </div>
             </div>
